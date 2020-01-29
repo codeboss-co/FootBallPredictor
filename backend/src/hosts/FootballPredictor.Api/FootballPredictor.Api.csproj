@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\libraries\Data\FootballPredictor.Data.InMemory\FootballPredictor.Data.InMemory.csproj" />
     <ProjectReference Include="..\..\libraries\FootballPredictor.Domain\FootballPredictor.Domain.csproj" />
+    <ProjectReference Include="..\..\libraries\FootballPredictor.FootballDataProvider.Http\FootballPredictor.FootballDataProvider.Http.csproj" />
   </ItemGroup>
 
 

@@ -3,6 +3,7 @@ using Autofac;
 using FootballPredictor.Data.Abstractions;
 using FootballPredictor.Data.InMemory;
 using FootballPredictor.Domain.Services;
+using FootballPredictor.FootballDataProvider.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -39,6 +40,8 @@ namespace FootballPredictor.Api
             services.AddControllers();
 
             services.AddAuthentication();
+
+            services.AddTransient<IMatchDataProvider, FootballDataMatchDataProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

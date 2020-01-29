@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data\FootballPredictor.Data.Abstractions\FootballPredictor.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\FootballPredictor.Dto\FootballPredictor.Dto.csproj" />
   </ItemGroup>
 
 </Project>
