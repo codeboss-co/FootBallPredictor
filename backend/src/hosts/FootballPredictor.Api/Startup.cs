@@ -1,6 +1,7 @@
 using System.Reflection;
 using Autofac;
 using FootballPredictor.Data.Abstractions;
+using FootballPredictor.Data.EFCore.PostgreSQL;
 using FootballPredictor.Data.InMemory;
 using FootballPredictor.Domain.Services;
 using FootballPredictor.FootballDataProvider.Http;
@@ -38,10 +39,15 @@ namespace FootballPredictor.Api
             });
 
             services.AddControllers();
+            // services.AddAuthentication();
+            services.AddHttpClient();
 
-            services.AddAuthentication();
-
+            // Dependencies
             services.AddTransient<IMatchDataProvider, FootballDataMatchDataProvider>();
+            services.AddPostgresDbContext(options =>
+            {
+                options.ConnectionString = @"postgres://hhgfafoj:bxK--h2kwjxoblpg2JsN1AYIHLef0012@rogue.db.elephantsql.com:5432/hhgfafoj";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,15 +59,10 @@ namespace FootballPredictor.Api
             }
 
             app.UseCors("CorsPolicy");
-
             // app.UseHttpsRedirection();
-
-            app.UseAuthentication();
-
+            // app.UseAuthentication();
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -80,9 +81,16 @@ namespace FootballPredictor.Api
             builder.RegisterAssemblyTypes(Assembly.GetCallingAssembly()).AsClosedTypesOf(typeof(ICommandHandler<>));
             builder.RegisterAssemblyTypes(Assembly.GetCallingAssembly()).AsClosedTypesOf(typeof(IQueryHandler<,>));
 
+            // >> InMemory Database Repositories
             builder.AddInMemoryDatabase(options =>
             {
                 options.Assemblies = new AssemblyList(typeof(TeamsInMemoryDbRepository).Assembly);
+            });
+
+            // >> PostgreSQL Repositories
+            builder.AddPostgresDbRepositories(options =>
+            {
+                options.Assemblies = new AssemblyList(typeof(MatchPostgresRepository).Assembly);
             });
         }
     }

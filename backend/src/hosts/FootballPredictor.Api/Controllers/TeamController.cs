@@ -6,22 +6,24 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace FootballPredictor.Api.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TeamController : ControllerBase
     {
-       
+
         private readonly ILogger<TeamController> _logger;
         private readonly ITeamsDbRepository _teamsDbRepository;
+        private readonly IMatchDbRepository _matchDbRepository;
 
         public TeamController(
             ILogger<TeamController> logger,
-            ITeamsDbRepository teamsDbRepository
-            )
+            ITeamsDbRepository teamsDbRepository,
+            IMatchDbRepository matchDbRepository)
         {
             _logger = logger;
             _teamsDbRepository = teamsDbRepository;
+            _matchDbRepository = matchDbRepository;
         }
 
         [HttpGet]

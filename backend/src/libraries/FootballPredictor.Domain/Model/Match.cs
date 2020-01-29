@@ -6,6 +6,7 @@ namespace FootballPredictor.Domain.Model
     public class Match : IAggregateRoot<long>
     {
         public long Id { get; set; }
+        public long MatchId { get; set; }
         public long SeasonId { get; set; }
         public long Matchday { get; set; }
         public Winner Winner { get; set; }
