@@ -15,11 +15,13 @@ namespace FootballPredictor.Data.InMemory
             // Repositories
             builder.RegisterAssemblyTypes(options.Assemblies?.ToArray() ?? new[] { Assembly.GetExecutingAssembly()} )
                 .AsClosedTypesOf(typeof(IGenericDbRepository<,>))
-                .AsImplementedInterfaces();
+                .AsImplementedInterfaces()
+                .SingleInstance(); // Just for development testing
 
             // Seeders
             builder.RegisterAssemblyTypes(options.Assemblies?.ToArray() ?? new []{ Assembly.GetExecutingAssembly() })
-                .AsClosedTypesOf(typeof(DbSeeder<>));
+                .AsClosedTypesOf(typeof(DbSeeder<>))
+                .SingleInstance(); // Just for development testing
         }
     }
 }
