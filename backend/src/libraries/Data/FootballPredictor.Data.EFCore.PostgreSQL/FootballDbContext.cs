@@ -7,7 +7,7 @@ namespace FootballPredictor.Data.EFCore.PostgreSQL
     {
         public DbSet<Match> Matches { get; set; }
 
-        public FootballDbContext(DbContextOptions<FootballDbContext> options)
+        public FootballDbContext(DbContextOptions<FootballDbContext> options) : base(options)
         {
         }
     }

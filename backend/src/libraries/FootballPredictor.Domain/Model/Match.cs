@@ -1,5 +1,4 @@
 ﻿using FootballPredictor.Data.Abstractions.Model;
-using FootballPredictor.Dto;
 
 namespace FootballPredictor.Domain.Model
 {
@@ -9,7 +8,9 @@ namespace FootballPredictor.Domain.Model
         public long MatchId { get; set; }
         public long SeasonId { get; set; }
         public long Matchday { get; set; }
-        public Winner Winner { get; set; }
+        public string HomeTeam { get; set; }
+        public string AwayTeam { get; set; }
+        public string Winner { get; set; }
         public int HomeTeamGoals { get; set; }
         public int AwayTeamGoals { get; set; }
     }

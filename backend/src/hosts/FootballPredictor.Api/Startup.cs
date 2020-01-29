@@ -46,7 +46,7 @@ namespace FootballPredictor.Api
             services.AddTransient<IMatchDataProvider, FootballDataMatchDataProvider>();
             services.AddPostgresDbContext(options =>
             {
-                options.ConnectionString = @"postgres://hhgfafoj:bxK--h2kwjxoblpg2JsN1AYIHLef0012@rogue.db.elephantsql.com:5432/hhgfafoj";
+                options.ConnectionString = @"Host=rogue.db.elephantsql.com;Database=hhgfafoj;Username=hhgfafoj;Password=bxK--h2kwjxoblpg2JsN1AYIHLef0012";
             });
         }
 
@@ -78,8 +78,8 @@ namespace FootballPredictor.Api
         public void ConfigureContainer(ContainerBuilder builder)
         {
             // Command / Query Handlers
-            builder.RegisterAssemblyTypes(Assembly.GetCallingAssembly()).AsClosedTypesOf(typeof(ICommandHandler<>));
-            builder.RegisterAssemblyTypes(Assembly.GetCallingAssembly()).AsClosedTypesOf(typeof(IQueryHandler<,>));
+            builder.RegisterAssemblyTypes(Assembly.GetEntryAssembly()).AsClosedTypesOf(typeof(ICommandHandler<>));
+            builder.RegisterAssemblyTypes(Assembly.GetEntryAssembly()).AsClosedTypesOf(typeof(IQueryHandler<,>));
 
             // >> InMemory Database Repositories
             builder.AddInMemoryDatabase(options =>

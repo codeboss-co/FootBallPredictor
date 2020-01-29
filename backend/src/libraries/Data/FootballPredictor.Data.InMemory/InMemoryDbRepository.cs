@@ -1,6 +1,7 @@
 ﻿using FootballPredictor.Data.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using FootballPredictor.Data.Abstractions.Model;
 
@@ -16,7 +17,7 @@ namespace FootballPredictor.Data.InMemory
         }
 
 
-        public Task InsertAsync(TEntity entity) => throw new NotImplementedException();
-        public Task<IReadOnlyCollection<TEntity>> Query() => Task.FromResult(Db.AsReadOnly() as IReadOnlyCollection<TEntity>);
+        public Task InsertAsync(TEntity entity, CancellationToken token = default) => throw new NotImplementedException();
+        public Task<IReadOnlyCollection<TEntity>> Query(CancellationToken token = default) => Task.FromResult(Db.AsReadOnly() as IReadOnlyCollection<TEntity>);
     }
 }

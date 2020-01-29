@@ -3,66 +3,65 @@ using System.Collections.Generic;
 
 namespace FootballPredictor.Dto
 {
-    public partial class MatchDayData
+    public class MatchDayData
     {
-        public long Count { get; set; }  // Matches Played
-        public Filters Filters { get; set; }
+        public int Count { get; set; }
         public Competition Competition { get; set; }
-        public List<MatchDto> Matches { get; set; }
+        public IList<MatchDto> Matches { get; set; }
     }
 
-    public partial class Competition
+    public class MatchDto
     {
-        public long Id { get; set; }
-        public string Name { get; set; }  // Premier League
-        public string Code { get; set; }  // PL
-        public DateTimeOffset LastUpdated { get; set; }
-    }
-
-    public partial class KeyValuePair
-    {
-        public long Id { get; set; }
-        public string Name { get; set; }
-    }
-
-    public partial class Filters
-    {
-        public long Matchday { get; set; }
-    }
-
-    public partial class MatchDto
-    {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public Season Season { get; set; }
-        public DateTimeOffset UtcDate { get; set; }
-        public long Matchday { get; set; }
-        public DateTimeOffset LastUpdated { get; set; }
+        public DateTime UtcDate { get; set; }
+        public string Status { get; set; }
+        public int Matchday { get; set; }
+        public string Stage { get; set; }
+        public string Group { get; set; }
+        public DateTime LastUpdated { get; set; }
         public Score Score { get; set; }
-        public KeyValuePair HomeTeam { get; set; }
-        public KeyValuePair AwayTeam { get; set; }
+        public TeamDto HomeTeam { get; set; }
+        public TeamDto AwayTeam { get; set; }
     }
 
-    public partial class Score
+    public class Competition
     {
-        public Winner Winner { get; set; }
-        public FullTimeScore FullTime { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Code { get; set; }
+        public string Plan { get; set; }
+        public DateTime LastUpdated { get; set; }
     }
 
-    public partial class FullTimeScore
+    public class Season
+    {
+        public int Id { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public int CurrentMatchday { get; set; }
+    }
+
+    public class FullTime
     {
         public int HomeTeam { get; set; }
         public int AwayTeam { get; set; }
     }
-
-    public partial class Season
+    
+    public class Score
     {
-        public long Id { get; set; }
-        public DateTimeOffset StartDate { get; set; }
-        public DateTimeOffset EndDate { get; set; }
-        public long CurrentMatchday { get; set; }
+        public string Winner { get; set; }
+        public FullTime FullTime { get; set; }
     }
 
 
-    public enum Winner { AwayTeam, Draw, HomeTeam };
+    public class TeamDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+
+    
 
 }
