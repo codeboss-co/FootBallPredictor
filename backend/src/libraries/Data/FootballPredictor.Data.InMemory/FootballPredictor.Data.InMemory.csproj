@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\FootballPredictor.Domain\FootballPredictor.Domain.csproj" />
+    <ProjectReference Include="..\FootballPredictor.Data.Abstractions\FootballPredictor.Data.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
