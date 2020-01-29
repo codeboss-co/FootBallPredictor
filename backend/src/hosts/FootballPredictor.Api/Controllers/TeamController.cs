@@ -2,19 +2,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FootballPredictor.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class TeamController : ControllerBase
     {
        
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<TeamController> _logger;
         private readonly ITeamsDbRepository _teamsDbRepository;
 
-        public WeatherForecastController(
-            ILogger<WeatherForecastController> logger,
+        public TeamController(
+            ILogger<TeamController> logger,
             ITeamsDbRepository teamsDbRepository
             )
         {

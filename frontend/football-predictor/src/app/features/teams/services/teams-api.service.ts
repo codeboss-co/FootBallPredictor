@@ -11,7 +11,7 @@ export class TeamsApiService {
   constructor(private http: HttpClient) { }
 
   public get$(): Observable<any> {
-      return this.http.get('http://localhost:5000/weatherforecast').pipe(
+      return this.http.get('http://localhost:5000/team').pipe(
           tap( data => console.log(data) )
       );
   }

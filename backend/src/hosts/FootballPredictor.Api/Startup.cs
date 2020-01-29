@@ -38,6 +38,7 @@ namespace FootballPredictor.Api
 
             services.AddControllers();
 
+            services.AddAuthentication();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +52,8 @@ namespace FootballPredictor.Api
             app.UseCors("CorsPolicy");
 
             // app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseRouting();
 
