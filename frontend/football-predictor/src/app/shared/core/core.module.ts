@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from '../../interceptors';
+import { NebularUIModule } from '../../@theme/nebular-ui.module.';
 
 const MODULES = [
     // Angular Modules
@@ -16,9 +17,12 @@ const MODULES = [
     imports: [
         CommonModule,
 
+        // UI Theme
+        NebularUIModule,
+
         MODULES
     ],
     providers: [httpInterceptorProviders],
-    exports: [MODULES]
+    exports: [MODULES, NebularUIModule]
 } )
 export class CoreModule {}
