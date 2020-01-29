@@ -20,7 +20,13 @@ namespace FootballPredictor.Data.EFCore.PostgreSQL
 
         public async Task InsertAsync(TEntity entity, CancellationToken token = default)
         {
-            _dbSet.Add(entity);
+            await _dbSet.AddAsync(entity);
+            int inserted = await _dbContext.SaveChangesAsync(token).ConfigureAwait(false);
+        }
+
+        public async Task InsertManyAsync(IEnumerable<TEntity> entities, CancellationToken token = default)
+        {
+            await _dbSet.AddRangeAsync(entities);
             int inserted = await _dbContext.SaveChangesAsync(token).ConfigureAwait(false);
         }
 

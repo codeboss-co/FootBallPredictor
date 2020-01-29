@@ -1,8 +1,10 @@
-﻿using FootballPredictor.Domain.Model;
+﻿using System.Collections.Generic;
+using FootballPredictor.Domain.Model;
 using FootballPredictor.Domain.Repositories;
 using FootballPredictor.Domain.Services;
 using System.Threading;
 using System.Threading.Tasks;
+using FootballPredictor.Common;
 
 namespace FootballPredictor.Api.Application.MatchDay.Commands
 {
@@ -33,6 +35,7 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
                                                     accessToken:"eb80d76def304f6fb82a123b1fd826a1")
                                                 .ConfigureAwait(false);
 
+            var matchList = new List<Match>(matchData.Matches.Count);
             foreach (var matchDto in matchData.Matches)
             {
                 var match = new Match
@@ -46,8 +49,12 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
                     HomeTeamGoals = matchDto.Score.FullTime.HomeTeam,
                     AwayTeamGoals = matchDto.Score.FullTime.AwayTeam
                 };
+                matchList.Add(match);
+            }
 
-                await _matchDbRepository.InsertAsync(match, token).ConfigureAwait(false);
+            if (!matchList.IsNullOrEmpty())
+            {
+                await _matchDbRepository.InsertManyAsync(matchList, token).ConfigureAwait(false);
             }
         }
     }

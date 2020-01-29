@@ -18,6 +18,8 @@ namespace FootballPredictor.Data.InMemory
 
 
         public Task InsertAsync(TEntity entity, CancellationToken token = default) => throw new NotImplementedException();
+        public Task InsertManyAsync(IEnumerable<TEntity> entities, CancellationToken token = default) => throw new NotImplementedException();
+
         public Task<IReadOnlyCollection<TEntity>> Query(CancellationToken token = default) => Task.FromResult(Db.AsReadOnly() as IReadOnlyCollection<TEntity>);
     }
 }

@@ -8,6 +8,7 @@ namespace FootballPredictor.Data.Abstractions
     public interface IGenericDbRepository<TEntity, TId> where TEntity : class, IEntity<TId>, IAggregateRoot<TId>
     {
         Task InsertAsync(TEntity entity, CancellationToken token = default);
+        Task InsertManyAsync(IEnumerable<TEntity> entities, CancellationToken token = default);
         Task<IReadOnlyCollection<TEntity>> Query(CancellationToken token = default);
     }
 }
