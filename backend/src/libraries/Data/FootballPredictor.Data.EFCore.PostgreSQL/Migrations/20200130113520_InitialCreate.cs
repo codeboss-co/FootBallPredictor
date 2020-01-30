@@ -17,8 +17,11 @@ namespace FootballPredictor.Data.EFCore.PostgreSQL.Migrations
                     SeasonId = table.Column<long>(nullable: false),
                     Matchday = table.Column<long>(nullable: false),
                     HomeTeam = table.Column<string>(nullable: true),
+                    HomeTeamId = table.Column<long>(nullable: false),
                     AwayTeam = table.Column<string>(nullable: true),
+                    AwayTeamId = table.Column<long>(nullable: false),
                     Winner = table.Column<string>(nullable: true),
+                    WinnerId = table.Column<long>(nullable: true),
                     HomeTeamGoals = table.Column<int>(nullable: false),
                     AwayTeamGoals = table.Column<int>(nullable: false)
                 },

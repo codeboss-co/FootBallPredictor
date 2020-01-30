@@ -1,27 +1,25 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-using FootballPredictor.Common;
+﻿using FootballPredictor.Common;
 using FootballPredictor.Domain.Services;
 using FootballPredictor.Dto;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace FootballPredictor.FootballDataProvider.Http
 {
+    /// <summary>
+    ///  https://api.football-data.org/v2/competitions/PL/matches?matchday=11
+    /// </summary>
     public class FootballDataMatchDataProvider : IMatchDataProvider
     {
-        private const string FOOTBALL_DATA_API_ADDRESS = "https://api.football-data.org/v2/competitions/";
         private readonly IHttpClientFactory _httpClientFactory;
 
         public FootballDataMatchDataProvider(IHttpClientFactory httpClientFactory) => _httpClientFactory = httpClientFactory;
 
         public async Task<MatchDayData> GetMatchDayDataAsync(string competition, int matchday, string accessToken)
         {
-            var httpClient = _httpClientFactory.CreateClient();
-            
-            httpClient.BaseAddress = new Uri(FOOTBALL_DATA_API_ADDRESS);
-            httpClient.DefaultRequestHeaders.Add("X-Auth-Token", accessToken);
+            var httpClient = _httpClientFactory.CreateClient("football-data");
 
-            var response = await httpClient.GetAsync($"{competition}/matches?matchday={matchday}")
+            var response = await httpClient.GetAsync($"/v2/competitions/{competition}/matches?matchday={matchday}")
                                             .ConfigureAwait(false);
 
             MatchDayData matchData = null;

@@ -38,18 +38,7 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
             var matchList = new List<Match>(matchData.Matches.Count);
             foreach (var matchDto in matchData.Matches)
             {
-                var match = new Match
-                {
-                    MatchId = matchDto.Id,
-                    SeasonId = matchDto.Season.Id,
-                    Matchday = matchDto.Matchday,
-                    Winner = matchDto.Score.Winner,
-                    HomeTeam = matchDto.HomeTeam.Name,
-                    AwayTeam = matchDto.AwayTeam.Name,
-                    HomeTeamGoals = matchDto.Score.FullTime.HomeTeam,
-                    AwayTeamGoals = matchDto.Score.FullTime.AwayTeam
-                };
-                matchList.Add(match);
+                matchList.Add(new Match(matchDto));
             }
 
             if (!matchList.IsNullOrEmpty())

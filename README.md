@@ -7,8 +7,9 @@
 
 > dotnet ef migrations add InitialCreate -s .\src\hosts\FootballPredictor.Api\ -p .\src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\
 
-> dotnet ef database update -s .\src\hosts\FootballPredictor.Api\ -p .\src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\
+> dotnet ef migrations remove -s .\src\hosts\FootballPredictor.Api\ -p .\src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\
 
+> dotnet ef database update -s .\src\hosts\FootballPredictor.Api\ -p .\src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\
 
 ## Postman
 

@@ -1,7 +1,9 @@
+using System;
 using System.Reflection;
 using Autofac;
 using AutoWrapper;
 using FootballPredictor.Api.Authentication;
+using FootballPredictor.Common;
 using FootballPredictor.Data.Abstractions;
 using FootballPredictor.Data.EFCore.PostgreSQL;
 using FootballPredictor.Data.InMemory;
@@ -18,6 +20,9 @@ namespace FootballPredictor.Api
 {
     public class Startup
     {
+        private static readonly string FOOTBALL_DATA_Auth_Token = System.Environment.GetEnvironmentVariable("FOOTBALL_DATA_TOKEN");
+        private static readonly string PostgreSQL_ConnectionString = System.Environment.GetEnvironmentVariable("POSTGRESQL_URI");
+
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
@@ -47,13 +52,19 @@ namespace FootballPredictor.Api
             // https://elanderson.net/2019/10/swagger-openapi-with-nswag-and-asp-net-core-3/
             AddOpenApiDocument(services); 
             services.AddAuthentication();
-            services.AddHttpClient();
+            services.AddHttpClient("football-data", client =>
+            {
+                Check.NotNullOrEmpty(FOOTBALL_DATA_Auth_Token, nameof(FOOTBALL_DATA_Auth_Token));
+                client.BaseAddress = new Uri($"{Configuration["FootballData:Uri"]}");
+                client.DefaultRequestHeaders.Add("X-Auth-Token", FOOTBALL_DATA_Auth_Token);
+            });
 
             // Dependencies
             services.AddTransient<IMatchDataProvider, FootballDataMatchDataProvider>();
             services.AddPostgresDbContext(options =>
             {
-                options.ConnectionString = @"Host=rogue.db.elephantsql.com;Database=hhgfafoj;Username=hhgfafoj;Password=bxK--h2kwjxoblpg2JsN1AYIHLef0012";
+                Check.NotNullOrEmpty(PostgreSQL_ConnectionString, nameof(PostgreSQL_ConnectionString));
+                options.ConnectionString = PostgreSQL_ConnectionString;
             });
 
             #region Local Development Dependencies
