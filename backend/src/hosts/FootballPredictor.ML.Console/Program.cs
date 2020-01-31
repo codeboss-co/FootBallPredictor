@@ -1,9 +1,12 @@
-﻿using FootballPredictor.ML.Console.DataStructures;
+﻿using System;
+using System.Collections.Generic;
+using FootballPredictor.ML.Console.DataStructures;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Npgsql;
 using System.Linq;
 using System.Threading.Tasks;
+using FootballPredictorML.Model;
 
 
 namespace FootballPredictor.ML.Console
@@ -32,72 +35,99 @@ namespace FootballPredictor.ML.Console
 
             // load the data 
             System.Console.WriteLine("Loading training data....");
-            var dataView = loader.Load(dbSource);
+            var trainingDataView = loader.Load(dbSource);
             System.Console.WriteLine("done");
 
-            
-            // set up a learning pipeline
-            var pipeline = mlContext.Transforms.CopyColumns(
-                    inputColumnName: "WinnerId",
-                    outputColumnName: "Label")
 
-                // one-hot encode all text features
-                .Append(mlContext.Transforms.Categorical.OneHotEncoding("HomeTeamId"))
-                .Append(mlContext.Transforms.Categorical.OneHotEncoding("AwayTeamId"))
+            // Data process configuration with pipeline data transformations 
+            var dataProcessPipeline =
+                mlContext.Transforms.Conversion.MapValueToKey("Winner", "Winner")
+                .Append(mlContext.Transforms.Categorical.OneHotEncoding(
+                    new[] { new InputOutputColumnPair("HomeTeam", "HomeTeam"),
+                        new InputOutputColumnPair("AwayTeam", "AwayTeam") }))
+                .Append(mlContext.Transforms.Concatenate("Features", new[] { "HomeTeam", "AwayTeam" }))
+                .Append(mlContext.Transforms.NormalizeMinMax("Features", "Features"))
+                .AppendCacheCheckpoint(mlContext);
 
-                // combine all input features into a single column 
-                .Append(mlContext.Transforms.Concatenate(
-                    "Features",
-                    "HomeTeamId",
-                    "AwayTeamId")
+            // Set the training algorithm 
+            var trainer = mlContext.MulticlassClassification.Trainers.OneVersusAll(mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(labelColumnName: "Winner", featureColumnName: "Features"), labelColumnName: "Winner")
+                .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel", "PredictedLabel"));
+            var trainingPipeline = dataProcessPipeline.Append(trainer);
 
-                // cache the data to speed up training
-                .AppendCacheCheckpoint(mlContext)
+            // Cross-Validate with single dataset (since we don't have two datasets, one for training and for evaluate)
+            // in order to evaluate and get the model's accuracy metrics
+            System.Console.WriteLine("=============== Cross-validating to get model's accuracy metrics ===============");
+            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(trainingDataView, trainingPipeline, numberOfFolds: 5, labelColumnName: "Winner");
+            PrintMulticlassClassificationFoldsAverageMetrics(crossValidationResults);
 
-                // use the fast tree learner 
-                // requires installation of additional NuGet package: Microsoft.ML.FastTree
-                .Append(mlContext.Regression.Trainers.FastTree()));
+            System.Console.WriteLine("=============== Training  model ===============");
+            ITransformer mlModel = trainingPipeline.Fit(trainingDataView);
+            System.Console.WriteLine("=============== End of training process ===============");
 
-            // train the model
-            System.Console.WriteLine("Training the model....");
-            var model = pipeline.Fit(dataView);
-            System.Console.WriteLine("done");
-
-            // get a set of predictions 
-            var predictions = model.Transform(dataView);
-
-            // get regression metrics to score the model
-            var metrics = mlContext.Regression.Evaluate(predictions, "Label", "Score");
-
-            // show the metrics
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-            System.Console.WriteLine($"*************************************************");
-            System.Console.WriteLine($"*       Model quality metrics evaluation         ");
-            System.Console.WriteLine($"*------------------------------------------------");
-            System.Console.WriteLine($"*       RSquared Score:      {metrics.RSquared:0.##}");// The closer its value is to 1, the better the model is.
-            System.Console.WriteLine($"*       Root Mean Squared Error:      {metrics.RootMeanSquaredError:#.##}"); // The lower it is, the better the model is. 
-
-            // PREDICTIONS
-            var predictionFunction = mlContext.Model.CreatePredictionEngine<MatchData, FootBallMatchPrediction>(model);
-
-            // prep a single taxi trip
-            var matchDataSample = new MatchData()
+            // Make predictions
+            var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
+            ModelOutput predictionResult = predEngine.Predict(new ModelInput
             {
-                HomeTeamId = 64,
-                AwayTeamId = 68,
-                WinnerId = 0 // actual winner for this match = 64
-            };
+                HomeTeam = "West Ham United FC",
+                AwayTeam = "Manchester City FC"
+            });
 
-            // make the prediction
-            var prediction = predictionFunction.Predict(matchDataSample);
-
-            // show the prediction
-            System.Console.WriteLine();
-            System.Console.WriteLine($"*************************************************");
+            // Show the prediction
             System.Console.WriteLine($"Single prediction:");
-            System.Console.WriteLine($"  Predicted winner: {prediction.WinnerId}");
-            System.Console.WriteLine($"  Actual winner: 64");
+            System.Console.WriteLine($"  Predicted winnder: {predictionResult.Prediction}");
+            System.Console.WriteLine($"  Actual winner: Manchester City FC");
+            System.Console.WriteLine($"Home Win: {predictionResult.Score[0] * 100:#.##}%");
+            System.Console.WriteLine($"Away Win: {predictionResult.Score[1] * 100:#.##}%");
+            System.Console.WriteLine($"Draw: {predictionResult.Score[2] * 100:#.##}%");
+        }
+
+        public static void PrintMulticlassClassificationFoldsAverageMetrics(IEnumerable<TrainCatalogBase.CrossValidationResult<MulticlassClassificationMetrics>> crossValResults)
+        {
+            var metricsInMultipleFolds = crossValResults.Select(r => r.Metrics);
+
+            var microAccuracyValues = metricsInMultipleFolds.Select(m => m.MicroAccuracy);
+            var microAccuracyAverage = microAccuracyValues.Average();
+            var microAccuraciesStdDeviation = CalculateStandardDeviation(microAccuracyValues);
+            var microAccuraciesConfidenceInterval95 = CalculateConfidenceInterval95(microAccuracyValues);
+
+            var macroAccuracyValues = metricsInMultipleFolds.Select(m => m.MacroAccuracy);
+            var macroAccuracyAverage = macroAccuracyValues.Average();
+            var macroAccuraciesStdDeviation = CalculateStandardDeviation(macroAccuracyValues);
+            var macroAccuraciesConfidenceInterval95 = CalculateConfidenceInterval95(macroAccuracyValues);
+
+            var logLossValues = metricsInMultipleFolds.Select(m => m.LogLoss);
+            var logLossAverage = logLossValues.Average();
+            var logLossStdDeviation = CalculateStandardDeviation(logLossValues);
+            var logLossConfidenceInterval95 = CalculateConfidenceInterval95(logLossValues);
+
+            var logLossReductionValues = metricsInMultipleFolds.Select(m => m.LogLossReduction);
+            var logLossReductionAverage = logLossReductionValues.Average();
+            var logLossReductionStdDeviation = CalculateStandardDeviation(logLossReductionValues);
+            var logLossReductionConfidenceInterval95 = CalculateConfidenceInterval95(logLossReductionValues);
+
+            System.Console.WriteLine($"*************************************************************************************************************");
+            System.Console.WriteLine($"*       Metrics for Multi-class Classification model      ");
+            System.Console.WriteLine($"*------------------------------------------------------------------------------------------------------------");
+            System.Console.WriteLine($"*       Average MicroAccuracy:    {microAccuracyAverage:0.###}  - Standard deviation: ({microAccuraciesStdDeviation:#.###})  - Confidence Interval 95%: ({microAccuraciesConfidenceInterval95:#.###})");
+            System.Console.WriteLine($"*       Average MacroAccuracy:    {macroAccuracyAverage:0.###}  - Standard deviation: ({macroAccuraciesStdDeviation:#.###})  - Confidence Interval 95%: ({macroAccuraciesConfidenceInterval95:#.###})");
+            System.Console.WriteLine($"*       Average LogLoss:          {logLossAverage:#.###}  - Standard deviation: ({logLossStdDeviation:#.###})  - Confidence Interval 95%: ({logLossConfidenceInterval95:#.###})");
+            System.Console.WriteLine($"*       Average LogLossReduction: {logLossReductionAverage:#.###}  - Standard deviation: ({logLossReductionStdDeviation:#.###})  - Confidence Interval 95%: ({logLossReductionConfidenceInterval95:#.###})");
+            System.Console.WriteLine($"*************************************************************************************************************");
+
+        }
+
+        public static double CalculateStandardDeviation(IEnumerable<double> values)
+        {
+            double average = values.Average();
+            double sumOfSquaresOfDifferences = values.Select(val => (val - average) * (val - average)).Sum();
+            double standardDeviation = Math.Sqrt(sumOfSquaresOfDifferences / (values.Count() - 1));
+            return standardDeviation;
+        }
+
+        public static double CalculateConfidenceInterval95(IEnumerable<double> values)
+        {
+            double confidenceInterval95 = 1.96 * CalculateStandardDeviation(values) / Math.Sqrt((values.Count() - 1));
+            return confidenceInterval95;
         }
     }
 }

@@ -1,0 +1,621 @@
+Id,MatchId,SeasonId,Matchday,HomeTeam,HomeTeamId,AwayTeam,AwayTeamId,Winner,WinnerId,HomeTeamGoals,AwayTeamGoals
+1,264341,468,1,Liverpool FC,64,Norwich City FC,68,HOME_TEAM,64,4,1
+2,264342,468,1,West Ham United FC,563,Manchester City FC,65,AWAY_TEAM,65,0,5
+3,264344,468,1,Burnley FC,328,Southampton FC,340,HOME_TEAM,328,3,0
+4,264345,468,1,Crystal Palace FC,354,Everton FC,62,DRAW,,0,0
+5,264346,468,1,Watford FC,346,Brighton & Hove Albion FC,397,AWAY_TEAM,397,0,3
+6,264347,468,1,AFC Bournemouth,1044,Sheffield United FC,356,DRAW,,1,1
+7,264348,468,1,Tottenham Hotspur FC,73,Aston Villa FC,58,HOME_TEAM,73,3,1
+8,264343,468,1,Leicester City FC,338,Wolverhampton Wanderers FC,76,DRAW,,0,0
+9,264349,468,1,Newcastle United FC,67,Arsenal FC,57,AWAY_TEAM,57,0,1
+10,264350,468,1,Manchester United FC,66,Chelsea FC,61,HOME_TEAM,66,4,0
+11,264354,468,2,Arsenal FC,57,Burnley FC,328,HOME_TEAM,57,2,1
+12,264352,468,2,Aston Villa FC,58,AFC Bournemouth,1044,AWAY_TEAM,1044,1,2
+13,264356,468,2,Everton FC,62,Watford FC,346,HOME_TEAM,62,1,0
+14,264357,468,2,Norwich City FC,68,Newcastle United FC,67,HOME_TEAM,68,3,1
+15,264359,468,2,Southampton FC,340,Liverpool FC,64,AWAY_TEAM,64,1,2
+16,264360,468,2,Brighton & Hove Albion FC,397,West Ham United FC,563,DRAW,,1,1
+17,264353,468,2,Manchester City FC,65,Tottenham Hotspur FC,73,DRAW,,2,2
+18,264358,468,2,Sheffield United FC,356,Crystal Palace FC,354,HOME_TEAM,356,1,0
+19,264355,468,2,Chelsea FC,61,Leicester City FC,338,DRAW,,1,1
+20,264351,468,2,Wolverhampton Wanderers FC,76,Manchester United FC,66,DRAW,,1,1
+21,264362,468,3,Aston Villa FC,58,Everton FC,62,HOME_TEAM,58,2,0
+22,264366,468,3,Norwich City FC,68,Chelsea FC,61,AWAY_TEAM,61,2,3
+23,264365,468,3,Manchester United FC,66,Crystal Palace FC,354,AWAY_TEAM,354,1,2
+24,264367,468,3,Sheffield United FC,356,Leicester City FC,338,AWAY_TEAM,338,1,2
+25,264368,468,3,Brighton & Hove Albion FC,397,Southampton FC,340,AWAY_TEAM,340,0,2
+26,264369,468,3,Watford FC,346,West Ham United FC,563,AWAY_TEAM,563,1,3
+27,264363,468,3,Liverpool FC,64,Arsenal FC,57,HOME_TEAM,64,3,1
+28,264370,468,3,AFC Bournemouth,1044,Manchester City FC,65,AWAY_TEAM,65,1,3
+29,264361,468,3,Wolverhampton Wanderers FC,76,Burnley FC,328,DRAW,,1,1
+30,264364,468,3,Tottenham Hotspur FC,73,Newcastle United FC,67,AWAY_TEAM,67,0,1
+31,264379,468,4,Southampton FC,340,Manchester United FC,66,DRAW,,1,1
+32,264371,468,4,Manchester City FC,65,Brighton & Hove Albion FC,397,HOME_TEAM,65,4,0
+33,264372,468,4,Newcastle United FC,67,Watford FC,346,DRAW,,1,1
+34,264374,468,4,Chelsea FC,61,Sheffield United FC,356,DRAW,,2,2
+35,264376,468,4,Leicester City FC,338,AFC Bournemouth,1044,HOME_TEAM,338,3,1
+36,264378,468,4,West Ham United FC,563,Norwich City FC,68,HOME_TEAM,563,2,0
+37,264380,468,4,Crystal Palace FC,354,Aston Villa FC,58,HOME_TEAM,354,1,0
+38,264377,468,4,Burnley FC,328,Liverpool FC,64,AWAY_TEAM,64,0,3
+39,264375,468,4,Everton FC,62,Wolverhampton Wanderers FC,76,HOME_TEAM,62,3,2
+40,264373,468,4,Arsenal FC,57,Tottenham Hotspur FC,73,DRAW,,2,2
+41,264383,468,5,Liverpool FC,64,Newcastle United FC,67,HOME_TEAM,64,3,1
+42,264381,468,5,Wolverhampton Wanderers FC,76,Chelsea FC,61,AWAY_TEAM,61,2,5
+43,264384,468,5,Tottenham Hotspur FC,73,Crystal Palace FC,354,HOME_TEAM,73,4,0
+44,264385,468,5,Manchester United FC,66,Leicester City FC,338,HOME_TEAM,66,1,0
+45,264387,468,5,Sheffield United FC,356,Southampton FC,340,AWAY_TEAM,340,0,1
+46,264388,468,5,Brighton & Hove Albion FC,397,Burnley FC,328,DRAW,,1,1
+47,264386,468,5,Norwich City FC,68,Manchester City FC,65,HOME_TEAM,68,3,2
+48,264390,468,5,AFC Bournemouth,1044,Everton FC,62,HOME_TEAM,1044,3,1
+49,264389,468,5,Watford FC,346,Arsenal FC,57,DRAW,,2,2
+50,264382,468,5,Aston Villa FC,58,West Ham United FC,563,DRAW,,0,0
+51,264399,468,6,Southampton FC,340,AFC Bournemouth,1044,AWAY_TEAM,1044,1,3
+52,264396,468,6,Leicester City FC,338,Tottenham Hotspur FC,73,HOME_TEAM,338,2,1
+53,264391,468,6,Manchester City FC,65,Watford FC,346,HOME_TEAM,65,8,0
+54,264395,468,6,Everton FC,62,Sheffield United FC,356,AWAY_TEAM,356,0,2
+55,264397,468,6,Burnley FC,328,Norwich City FC,68,HOME_TEAM,328,2,0
+56,264392,468,6,Newcastle United FC,67,Brighton & Hove Albion FC,397,DRAW,,0,0
+57,264398,468,6,West Ham United FC,563,Manchester United FC,66,HOME_TEAM,563,2,0
+58,264400,468,6,Crystal Palace FC,354,Wolverhampton Wanderers FC,76,DRAW,,1,1
+59,264393,468,6,Arsenal FC,57,Aston Villa FC,58,HOME_TEAM,57,3,2
+60,264394,468,6,Chelsea FC,61,Liverpool FC,64,AWAY_TEAM,64,1,2
+61,264407,468,7,Sheffield United FC,356,Liverpool FC,64,AWAY_TEAM,64,0,1
+62,264401,468,7,Wolverhampton Wanderers FC,76,Watford FC,346,HOME_TEAM,76,2,0
+63,264402,468,7,Aston Villa FC,58,Burnley FC,328,DRAW,,2,2
+64,264403,468,7,Chelsea FC,61,Brighton & Hove Albion FC,397,HOME_TEAM,61,2,0
+65,264404,468,7,Tottenham Hotspur FC,73,Southampton FC,340,HOME_TEAM,73,2,1
+66,264409,468,7,Crystal Palace FC,354,Norwich City FC,68,HOME_TEAM,354,2,0
+67,264410,468,7,AFC Bournemouth,1044,West Ham United FC,563,DRAW,,2,2
+68,264405,468,7,Everton FC,62,Manchester City FC,65,AWAY_TEAM,65,1,3
+69,264408,468,7,Leicester City FC,338,Newcastle United FC,67,HOME_TEAM,338,5,0
+70,264406,468,7,Manchester United FC,66,Arsenal FC,57,DRAW,,1,1
+71,264419,468,8,Brighton & Hove Albion FC,397,Tottenham Hotspur FC,73,HOME_TEAM,397,3,0
+72,264411,468,8,Liverpool FC,64,Leicester City FC,338,HOME_TEAM,64,2,1
+73,264415,468,8,Norwich City FC,68,Aston Villa FC,58,AWAY_TEAM,58,1,5
+74,264416,468,8,Burnley FC,328,Everton FC,62,HOME_TEAM,328,1,0
+75,264420,468,8,Watford FC,346,Sheffield United FC,356,DRAW,,0,0
+76,264417,468,8,West Ham United FC,563,Crystal Palace FC,354,AWAY_TEAM,354,1,2
+77,264412,468,8,Manchester City FC,65,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,0,2
+78,264414,468,8,Arsenal FC,57,AFC Bournemouth,1044,HOME_TEAM,57,1,0
+79,264418,468,8,Southampton FC,340,Chelsea FC,61,AWAY_TEAM,61,1,4
+80,264413,468,8,Newcastle United FC,67,Manchester United FC,66,HOME_TEAM,67,1,0
+81,264425,468,9,Everton FC,62,West Ham United FC,563,HOME_TEAM,62,2,0
+82,264421,468,9,Wolverhampton Wanderers FC,76,Southampton FC,340,DRAW,,1,1
+83,264422,468,9,Aston Villa FC,58,Brighton & Hove Albion FC,397,HOME_TEAM,58,2,1
+84,264423,468,9,Chelsea FC,61,Newcastle United FC,67,HOME_TEAM,61,1,0
+85,264424,468,9,Tottenham Hotspur FC,73,Watford FC,346,DRAW,,1,1
+86,264428,468,9,Leicester City FC,338,Burnley FC,328,HOME_TEAM,338,2,1
+87,264430,468,9,AFC Bournemouth,1044,Norwich City FC,68,DRAW,,0,0
+88,264429,468,9,Crystal Palace FC,354,Manchester City FC,65,AWAY_TEAM,65,0,2
+89,264426,468,9,Manchester United FC,66,Liverpool FC,64,DRAW,,1,1
+90,264427,468,9,Sheffield United FC,356,Arsenal FC,57,HOME_TEAM,356,1,0
+91,264438,468,10,Southampton FC,340,Leicester City FC,338,AWAY_TEAM,338,0,9
+92,264432,468,10,Manchester City FC,65,Aston Villa FC,58,HOME_TEAM,65,3,0
+93,264437,468,10,West Ham United FC,563,Sheffield United FC,356,DRAW,,1,1
+94,264439,468,10,Brighton & Hove Albion FC,397,Everton FC,62,HOME_TEAM,397,3,2
+95,264440,468,10,Watford FC,346,AFC Bournemouth,1044,DRAW,,0,0
+96,264436,468,10,Burnley FC,328,Chelsea FC,61,AWAY_TEAM,61,2,4
+97,264433,468,10,Newcastle United FC,67,Wolverhampton Wanderers FC,76,DRAW,,1,1
+98,264431,468,10,Liverpool FC,64,Tottenham Hotspur FC,73,HOME_TEAM,64,2,1
+99,264434,468,10,Arsenal FC,57,Crystal Palace FC,354,DRAW,,2,2
+100,264435,468,10,Norwich City FC,68,Manchester United FC,66,AWAY_TEAM,66,1,3
+101,264450,468,11,AFC Bournemouth,1044,Manchester United FC,66,HOME_TEAM,1044,1,0
+102,264448,468,11,Brighton & Hove Albion FC,397,Norwich City FC,68,HOME_TEAM,397,2,0
+103,264441,468,11,Aston Villa FC,58,Liverpool FC,64,AWAY_TEAM,64,1,2
+104,264442,468,11,Manchester City FC,65,Southampton FC,340,HOME_TEAM,65,2,1
+105,264443,468,11,Arsenal FC,57,Wolverhampton Wanderers FC,76,DRAW,,1,1
+106,264445,468,11,Sheffield United FC,356,Burnley FC,328,HOME_TEAM,356,3,0
+107,264446,468,11,West Ham United FC,563,Newcastle United FC,67,AWAY_TEAM,67,2,3
+108,264449,468,11,Watford FC,346,Chelsea FC,61,AWAY_TEAM,61,1,2
+109,264447,468,11,Crystal Palace FC,354,Leicester City FC,338,AWAY_TEAM,338,0,2
+110,264444,468,11,Everton FC,62,Tottenham Hotspur FC,73,DRAW,,1,1
+111,264457,468,12,Norwich City FC,68,Watford FC,346,AWAY_TEAM,346,0,2
+112,264454,468,12,Chelsea FC,61,Crystal Palace FC,354,HOME_TEAM,61,2,0
+113,264453,468,12,Newcastle United FC,67,AFC Bournemouth,1044,HOME_TEAM,67,2,1
+114,264455,468,12,Tottenham Hotspur FC,73,Sheffield United FC,356,DRAW,,1,1
+115,264459,468,12,Burnley FC,328,West Ham United FC,563,HOME_TEAM,328,3,0
+116,264460,468,12,Southampton FC,340,Everton FC,62,AWAY_TEAM,62,1,2
+117,264458,468,12,Leicester City FC,338,Arsenal FC,57,HOME_TEAM,338,2,0
+118,264451,468,12,Wolverhampton Wanderers FC,76,Aston Villa FC,58,HOME_TEAM,76,2,1
+119,264456,468,12,Manchester United FC,66,Brighton & Hove Albion FC,397,HOME_TEAM,66,3,1
+120,264452,468,12,Liverpool FC,64,Manchester City FC,65,HOME_TEAM,64,3,1
+121,264466,468,13,West Ham United FC,563,Tottenham Hotspur FC,73,AWAY_TEAM,73,2,3
+122,264463,468,13,Arsenal FC,57,Southampton FC,340,DRAW,,2,2
+123,264464,468,13,Everton FC,62,Norwich City FC,68,AWAY_TEAM,68,0,2
+124,264467,468,13,Crystal Palace FC,354,Liverpool FC,64,AWAY_TEAM,64,1,2
+125,264468,468,13,Brighton & Hove Albion FC,397,Leicester City FC,338,AWAY_TEAM,338,0,2
+126,264469,468,13,Watford FC,346,Burnley FC,328,AWAY_TEAM,328,0,3
+127,264470,468,13,AFC Bournemouth,1044,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,1,2
+128,264462,468,13,Manchester City FC,65,Chelsea FC,61,HOME_TEAM,65,2,1
+129,264465,468,13,Sheffield United FC,356,Manchester United FC,66,DRAW,,3,3
+130,264461,468,13,Aston Villa FC,58,Newcastle United FC,67,HOME_TEAM,58,2,0
+131,264473,468,14,Newcastle United FC,67,Manchester City FC,65,DRAW,,2,2
+132,264472,468,14,Liverpool FC,64,Brighton & Hove Albion FC,397,HOME_TEAM,64,2,1
+133,264474,468,14,Chelsea FC,61,West Ham United FC,563,AWAY_TEAM,563,0,1
+134,264475,468,14,Tottenham Hotspur FC,73,AFC Bournemouth,1044,HOME_TEAM,73,3,2
+135,264479,468,14,Burnley FC,328,Crystal Palace FC,354,AWAY_TEAM,354,0,2
+136,264480,468,14,Southampton FC,340,Watford FC,346,HOME_TEAM,340,2,1
+137,264471,468,14,Wolverhampton Wanderers FC,76,Sheffield United FC,356,DRAW,,1,1
+138,264477,468,14,Norwich City FC,68,Arsenal FC,57,DRAW,,2,2
+139,264476,468,14,Manchester United FC,66,Aston Villa FC,58,DRAW,,2,2
+140,264478,468,14,Leicester City FC,338,Everton FC,62,HOME_TEAM,338,2,1
+141,264490,468,15,Crystal Palace FC,354,AFC Bournemouth,1044,HOME_TEAM,354,1,0
+142,264486,468,15,Burnley FC,328,Manchester City FC,65,AWAY_TEAM,65,1,4
+143,264481,468,15,Wolverhampton Wanderers FC,76,West Ham United FC,563,HOME_TEAM,76,2,0
+144,264483,468,15,Manchester United FC,66,Tottenham Hotspur FC,73,HOME_TEAM,66,2,1
+145,264485,468,15,Leicester City FC,338,Watford FC,346,HOME_TEAM,338,2,0
+146,264488,468,15,Chelsea FC,61,Aston Villa FC,58,HOME_TEAM,61,2,1
+147,264489,468,15,Southampton FC,340,Norwich City FC,68,HOME_TEAM,340,2,1
+148,264487,468,15,Liverpool FC,64,Everton FC,62,HOME_TEAM,64,5,2
+149,264484,468,15,Sheffield United FC,356,Newcastle United FC,67,AWAY_TEAM,67,0,2
+150,264482,468,15,Arsenal FC,57,Brighton & Hove Albion FC,397,AWAY_TEAM,397,1,2
+151,264495,468,16,Everton FC,62,Chelsea FC,61,HOME_TEAM,62,3,1
+152,264494,468,16,Tottenham Hotspur FC,73,Burnley FC,328,HOME_TEAM,73,5,0
+153,264499,468,16,Watford FC,346,Crystal Palace FC,354,DRAW,,0,0
+154,264500,468,16,AFC Bournemouth,1044,Liverpool FC,64,AWAY_TEAM,64,0,3
+155,264492,468,16,Manchester City FC,65,Manchester United FC,66,AWAY_TEAM,66,1,2
+156,264491,468,16,Aston Villa FC,58,Leicester City FC,338,AWAY_TEAM,338,1,4
+157,264493,468,16,Newcastle United FC,67,Southampton FC,340,HOME_TEAM,67,2,1
+158,264496,468,16,Norwich City FC,68,Sheffield United FC,356,AWAY_TEAM,356,1,2
+159,264498,468,16,Brighton & Hove Albion FC,397,Wolverhampton Wanderers FC,76,DRAW,,2,2
+160,264497,468,16,West Ham United FC,563,Arsenal FC,57,AWAY_TEAM,57,1,3
+161,264502,468,17,Liverpool FC,64,Watford FC,346,HOME_TEAM,64,2,0
+162,264504,468,17,Chelsea FC,61,AFC Bournemouth,1044,AWAY_TEAM,1044,0,1
+163,264506,468,17,Sheffield United FC,356,Aston Villa FC,58,HOME_TEAM,356,2,0
+164,264507,468,17,Leicester City FC,338,Norwich City FC,68,DRAW,,1,1
+165,264508,468,17,Burnley FC,328,Newcastle United FC,67,HOME_TEAM,328,1,0
+166,264509,468,17,Southampton FC,340,West Ham United FC,563,AWAY_TEAM,563,0,1
+167,264501,468,17,Wolverhampton Wanderers FC,76,Tottenham Hotspur FC,73,AWAY_TEAM,73,1,2
+168,264505,468,17,Manchester United FC,66,Everton FC,62,DRAW,,1,1
+169,264503,468,17,Arsenal FC,57,Manchester City FC,65,AWAY_TEAM,65,0,3
+170,264510,468,17,Crystal Palace FC,354,Brighton & Hove Albion FC,397,DRAW,,1,1
+171,264515,468,18,Everton FC,62,Arsenal FC,57,DRAW,,0,0
+172,264511,468,18,Aston Villa FC,58,Southampton FC,340,AWAY_TEAM,340,1,3
+173,264513,468,18,Newcastle United FC,67,Crystal Palace FC,354,HOME_TEAM,67,1,0
+174,264516,468,18,Norwich City FC,68,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,1,2
+175,264518,468,18,Brighton & Hove Albion FC,397,Sheffield United FC,356,AWAY_TEAM,356,0,1
+176,264520,468,18,AFC Bournemouth,1044,Burnley FC,328,AWAY_TEAM,328,0,1
+177,264512,468,18,Manchester City FC,65,Leicester City FC,338,HOME_TEAM,65,3,1
+178,264519,468,18,Watford FC,346,Manchester United FC,66,HOME_TEAM,346,2,0
+179,264514,468,18,Tottenham Hotspur FC,73,Chelsea FC,61,AWAY_TEAM,61,0,2
+180,264517,468,18,West Ham United FC,563,Liverpool FC,64,AWAY_TEAM,64,0,2
+181,264524,468,19,Tottenham Hotspur FC,73,Brighton & Hove Albion FC,397,HOME_TEAM,73,2,1
+182,264522,468,19,Aston Villa FC,58,Norwich City FC,68,HOME_TEAM,58,1,0
+183,264523,468,19,Chelsea FC,61,Southampton FC,340,AWAY_TEAM,340,0,2
+184,264525,468,19,Everton FC,62,Burnley FC,328,HOME_TEAM,62,1,0
+185,264527,468,19,Sheffield United FC,356,Watford FC,346,DRAW,,1,1
+186,264529,468,19,Crystal Palace FC,354,West Ham United FC,563,HOME_TEAM,354,2,1
+187,264530,468,19,AFC Bournemouth,1044,Arsenal FC,57,DRAW,,1,1
+188,264526,468,19,Manchester United FC,66,Newcastle United FC,67,HOME_TEAM,66,4,1
+189,264528,468,19,Leicester City FC,338,Liverpool FC,64,AWAY_TEAM,64,0,4
+190,264521,468,19,Wolverhampton Wanderers FC,76,Manchester City FC,65,HOME_TEAM,76,3,2
+191,264539,468,20,Brighton & Hove Albion FC,397,AFC Bournemouth,1044,HOME_TEAM,397,2,0
+192,264533,468,20,Newcastle United FC,67,Everton FC,62,AWAY_TEAM,62,1,2
+193,264538,468,20,Southampton FC,340,Crystal Palace FC,354,DRAW,,1,1
+194,264540,468,20,Watford FC,346,Aston Villa FC,58,HOME_TEAM,346,3,0
+195,264535,468,20,Norwich City FC,68,Tottenham Hotspur FC,73,DRAW,,2,2
+196,264537,468,20,West Ham United FC,563,Leicester City FC,338,AWAY_TEAM,338,1,2
+197,264536,468,20,Burnley FC,328,Manchester United FC,66,AWAY_TEAM,66,0,2
+198,264534,468,20,Arsenal FC,57,Chelsea FC,61,AWAY_TEAM,61,1,2
+199,264531,468,20,Liverpool FC,64,Wolverhampton Wanderers FC,76,HOME_TEAM,64,1,0
+200,264532,468,20,Manchester City FC,65,Sheffield United FC,356,HOME_TEAM,65,2,0
+201,264546,468,21,Burnley FC,328,Aston Villa FC,58,AWAY_TEAM,58,1,2
+202,264549,468,21,Brighton & Hove Albion FC,397,Chelsea FC,61,DRAW,,1,1
+203,264543,468,21,Newcastle United FC,67,Leicester City FC,338,AWAY_TEAM,338,0,3
+204,264548,468,21,Southampton FC,340,Tottenham Hotspur FC,73,HOME_TEAM,340,1,0
+205,264550,468,21,Watford FC,346,Wolverhampton Wanderers FC,76,HOME_TEAM,346,2,1
+206,264542,468,21,Manchester City FC,65,Everton FC,62,HOME_TEAM,65,2,1
+207,264545,468,21,Norwich City FC,68,Crystal Palace FC,354,DRAW,,1,1
+208,264547,468,21,West Ham United FC,563,AFC Bournemouth,1044,HOME_TEAM,563,4,0
+209,264544,468,21,Arsenal FC,57,Manchester United FC,66,HOME_TEAM,57,2,0
+210,264541,468,21,Liverpool FC,64,Sheffield United FC,356,HOME_TEAM,64,2,0
+211,264557,468,22,Sheffield United FC,356,West Ham United FC,563,HOME_TEAM,356,1,0
+212,264559,468,22,Crystal Palace FC,354,Arsenal FC,57,DRAW,,1,1
+213,264551,468,22,Wolverhampton Wanderers FC,76,Newcastle United FC,67,DRAW,,1,1
+214,264553,468,22,Chelsea FC,61,Burnley FC,328,HOME_TEAM,61,3,0
+215,264555,468,22,Everton FC,62,Brighton & Hove Albion FC,397,HOME_TEAM,62,1,0
+216,264556,468,22,Manchester United FC,66,Norwich City FC,68,HOME_TEAM,66,4,0
+217,264558,468,22,Leicester City FC,338,Southampton FC,340,AWAY_TEAM,340,1,2
+218,264554,468,22,Tottenham Hotspur FC,73,Liverpool FC,64,AWAY_TEAM,64,0,1
+219,264560,468,22,AFC Bournemouth,1044,Watford FC,346,AWAY_TEAM,346,0,3
+220,264552,468,22,Aston Villa FC,58,Manchester City FC,65,AWAY_TEAM,65,1,6
+221,264570,468,23,Watford FC,346,Tottenham Hotspur FC,73,DRAW,,0,0
+222,264562,468,23,Manchester City FC,65,Crystal Palace FC,354,DRAW,,2,2
+223,264564,468,23,Arsenal FC,57,Sheffield United FC,356,DRAW,,1,1
+224,264565,468,23,Norwich City FC,68,AFC Bournemouth,1044,HOME_TEAM,68,1,0
+225,264567,468,23,West Ham United FC,563,Everton FC,62,DRAW,,1,1
+226,264568,468,23,Southampton FC,340,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,2,3
+227,264569,468,23,Brighton & Hove Albion FC,397,Aston Villa FC,58,DRAW,,1,1
+228,264563,468,23,Newcastle United FC,67,Chelsea FC,61,HOME_TEAM,67,1,0
+229,264566,468,23,Burnley FC,328,Leicester City FC,338,HOME_TEAM,328,2,1
+230,264561,468,23,Liverpool FC,64,Manchester United FC,66,HOME_TEAM,64,2,0
+231,264572,468,24,Aston Villa FC,58,Watford FC,346,HOME_TEAM,58,2,1
+232,264573,468,24,Everton FC,62,Newcastle United FC,67,DRAW,,2,2
+233,264575,468,24,Sheffield United FC,356,Manchester City FC,65,AWAY_TEAM,65,0,1
+234,264577,468,24,AFC Bournemouth,1044,Brighton & Hove Albion FC,397,HOME_TEAM,1044,3,1
+235,264580,468,24,Crystal Palace FC,354,Southampton FC,340,AWAY_TEAM,340,0,2
+236,264578,468,24,Chelsea FC,61,Arsenal FC,57,DRAW,,2,2
+237,264576,468,24,Leicester City FC,338,West Ham United FC,563,HOME_TEAM,338,4,1
+238,264579,468,24,Tottenham Hotspur FC,73,Norwich City FC,68,HOME_TEAM,73,2,1
+239,264574,468,24,Manchester United FC,66,Burnley FC,328,AWAY_TEAM,328,0,2
+240,264571,468,24,Wolverhampton Wanderers FC,76,Liverpool FC,64,AWAY_TEAM,64,1,2
+241,233028,151,1,Manchester United FC,66,Leicester City FC,338,HOME_TEAM,66,2,1
+242,233026,151,1,Newcastle United FC,67,Tottenham Hotspur FC,73,AWAY_TEAM,73,1,2
+243,233024,151,1,Fulham FC,63,Crystal Palace FC,354,AWAY_TEAM,354,0,2
+244,233029,151,1,Huddersfield Town AFC,394,Chelsea FC,61,AWAY_TEAM,61,0,3
+245,233031,151,1,Watford FC,346,Brighton & Hove Albion FC,397,HOME_TEAM,346,2,0
+246,233032,151,1,AFC Bournemouth,1044,Cardiff City FC,715,HOME_TEAM,1044,2,0
+247,233023,151,1,Wolverhampton Wanderers FC,76,Everton FC,62,DRAW,,2,2
+248,233025,151,1,Liverpool FC,64,West Ham United FC,563,HOME_TEAM,64,4,0
+249,233030,151,1,Southampton FC,340,Burnley FC,328,DRAW,,0,0
+250,233027,151,1,Arsenal FC,57,Manchester City FC,65,AWAY_TEAM,65,0,2
+251,233039,151,2,Cardiff City FC,715,Newcastle United FC,67,DRAW,,0,0
+252,233035,151,2,Tottenham Hotspur FC,73,Fulham FC,63,HOME_TEAM,73,3,1
+253,233036,151,2,Everton FC,62,Southampton FC,340,HOME_TEAM,62,2,1
+254,233037,151,2,Leicester City FC,338,Wolverhampton Wanderers FC,76,HOME_TEAM,338,2,0
+255,233040,151,2,West Ham United FC,563,AFC Bournemouth,1044,AWAY_TEAM,1044,1,2
+256,233034,151,2,Chelsea FC,61,Arsenal FC,57,HOME_TEAM,61,3,2
+257,233033,151,2,Manchester City FC,65,Huddersfield Town AFC,394,HOME_TEAM,65,6,1
+258,233038,151,2,Burnley FC,328,Watford FC,346,AWAY_TEAM,346,1,3
+259,233042,151,2,Brighton & Hove Albion FC,397,Manchester United FC,66,HOME_TEAM,397,3,2
+260,233041,151,2,Crystal Palace FC,354,Liverpool FC,64,AWAY_TEAM,64,0,2
+261,233043,151,3,Wolverhampton Wanderers FC,76,Manchester City FC,65,DRAW,,1,1
+262,233047,151,3,Arsenal FC,57,West Ham United FC,563,HOME_TEAM,57,3,1
+263,233049,151,3,Huddersfield Town AFC,394,Cardiff City FC,715,DRAW,,0,0
+264,233050,151,3,Southampton FC,340,Leicester City FC,338,AWAY_TEAM,338,1,2
+265,233052,151,3,AFC Bournemouth,1044,Everton FC,62,DRAW,,2,2
+266,233045,151,3,Liverpool FC,64,Brighton & Hove Albion FC,397,HOME_TEAM,64,1,0
+267,233051,151,3,Watford FC,346,Crystal Palace FC,354,HOME_TEAM,346,2,1
+268,233044,151,3,Fulham FC,63,Burnley FC,328,HOME_TEAM,63,4,2
+269,233046,151,3,Newcastle United FC,67,Chelsea FC,61,AWAY_TEAM,61,1,2
+270,233048,151,3,Manchester United FC,66,Tottenham Hotspur FC,73,AWAY_TEAM,73,0,3
+271,233056,151,4,Leicester City FC,338,Liverpool FC,64,AWAY_TEAM,64,1,2
+272,233054,151,4,Chelsea FC,61,AFC Bournemouth,1044,HOME_TEAM,61,2,0
+273,233055,151,4,Everton FC,62,Huddersfield Town AFC,394,DRAW,,1,1
+274,233059,151,4,West Ham United FC,563,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,0,1
+275,233060,151,4,Crystal Palace FC,354,Southampton FC,340,AWAY_TEAM,340,0,2
+276,233061,151,4,Brighton & Hove Albion FC,397,Fulham FC,63,DRAW,,2,2
+277,233053,151,4,Manchester City FC,65,Newcastle United FC,67,HOME_TEAM,65,2,1
+278,233058,151,4,Cardiff City FC,715,Arsenal FC,57,AWAY_TEAM,57,2,3
+279,233057,151,4,Burnley FC,328,Manchester United FC,66,AWAY_TEAM,66,0,2
+280,233062,151,4,Watford FC,346,Tottenham Hotspur FC,73,HOME_TEAM,346,2,1
+281,233067,151,5,Tottenham Hotspur FC,73,Liverpool FC,64,AWAY_TEAM,64,1,2
+282,233064,151,5,Manchester City FC,65,Fulham FC,63,HOME_TEAM,65,3,0
+283,233065,151,5,Newcastle United FC,67,Arsenal FC,57,AWAY_TEAM,57,1,2
+284,233066,151,5,Chelsea FC,61,Cardiff City FC,715,HOME_TEAM,61,4,1
+285,233069,151,5,Huddersfield Town AFC,394,Crystal Palace FC,354,AWAY_TEAM,354,0,1
+286,233072,151,5,AFC Bournemouth,1044,Leicester City FC,338,HOME_TEAM,1044,4,2
+287,233071,151,5,Watford FC,346,Manchester United FC,66,AWAY_TEAM,66,1,2
+288,233063,151,5,Wolverhampton Wanderers FC,76,Burnley FC,328,HOME_TEAM,76,1,0
+289,233068,151,5,Everton FC,62,West Ham United FC,563,AWAY_TEAM,563,1,3
+290,233070,151,5,Southampton FC,340,Brighton & Hove Albion FC,397,DRAW,,2,2
+291,233073,151,6,Fulham FC,63,Watford FC,346,DRAW,,1,1
+292,233074,151,6,Liverpool FC,64,Southampton FC,340,HOME_TEAM,64,3,0
+293,233076,151,6,Manchester United FC,66,Wolverhampton Wanderers FC,76,DRAW,,1,1
+294,233077,151,6,Leicester City FC,338,Huddersfield Town AFC,394,HOME_TEAM,338,3,1
+295,233078,151,6,Burnley FC,328,AFC Bournemouth,1044,HOME_TEAM,328,4,0
+296,233079,151,6,Cardiff City FC,715,Manchester City FC,65,AWAY_TEAM,65,0,5
+297,233081,151,6,Crystal Palace FC,354,Newcastle United FC,67,DRAW,,0,0
+298,233082,151,6,Brighton & Hove Albion FC,397,Tottenham Hotspur FC,73,AWAY_TEAM,73,1,2
+299,233080,151,6,West Ham United FC,563,Chelsea FC,61,DRAW,,0,0
+300,233075,151,6,Arsenal FC,57,Everton FC,62,HOME_TEAM,57,2,0
+301,233091,151,7,West Ham United FC,563,Manchester United FC,66,HOME_TEAM,563,3,1
+302,233083,151,7,Wolverhampton Wanderers FC,76,Southampton FC,340,HOME_TEAM,76,2,0
+303,233084,151,7,Manchester City FC,65,Brighton & Hove Albion FC,397,HOME_TEAM,65,2,0
+304,233085,151,7,Newcastle United FC,67,Leicester City FC,338,AWAY_TEAM,338,0,2
+305,233086,151,7,Arsenal FC,57,Watford FC,346,HOME_TEAM,57,2,0
+306,233088,151,7,Everton FC,62,Fulham FC,63,HOME_TEAM,62,3,0
+307,233089,151,7,Huddersfield Town AFC,394,Tottenham Hotspur FC,73,AWAY_TEAM,73,0,2
+308,233087,151,7,Chelsea FC,61,Liverpool FC,64,DRAW,,1,1
+309,233090,151,7,Cardiff City FC,715,Burnley FC,328,AWAY_TEAM,328,1,2
+310,233092,151,7,AFC Bournemouth,1044,Crystal Palace FC,354,HOME_TEAM,1044,2,1
+311,233101,151,8,Brighton & Hove Albion FC,397,West Ham United FC,563,HOME_TEAM,397,1,0
+312,233095,151,8,Tottenham Hotspur FC,73,Cardiff City FC,715,HOME_TEAM,73,1,0
+313,233097,151,8,Leicester City FC,338,Everton FC,62,AWAY_TEAM,62,1,2
+314,233098,151,8,Burnley FC,328,Huddersfield Town AFC,394,DRAW,,1,1
+315,233100,151,8,Crystal Palace FC,354,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,0,1
+316,233102,151,8,Watford FC,346,AFC Bournemouth,1044,AWAY_TEAM,1044,0,4
+317,233096,151,8,Manchester United FC,66,Newcastle United FC,67,HOME_TEAM,66,3,2
+318,233093,151,8,Fulham FC,63,Arsenal FC,57,AWAY_TEAM,57,1,5
+319,233099,151,8,Southampton FC,340,Chelsea FC,61,AWAY_TEAM,61,0,3
+320,233094,151,8,Liverpool FC,64,Manchester City FC,65,DRAW,,0,0
+321,233107,151,9,Chelsea FC,61,Manchester United FC,66,DRAW,,2,2
+322,233103,151,9,Wolverhampton Wanderers FC,76,Watford FC,346,AWAY_TEAM,346,0,2
+323,233104,151,9,Manchester City FC,65,Burnley FC,328,HOME_TEAM,65,5,0
+324,233105,151,9,Newcastle United FC,67,Brighton & Hove Albion FC,397,AWAY_TEAM,397,0,1
+325,233110,151,9,Cardiff City FC,715,Fulham FC,63,HOME_TEAM,715,4,2
+326,233111,151,9,West Ham United FC,563,Tottenham Hotspur FC,73,AWAY_TEAM,73,0,1
+327,233112,151,9,AFC Bournemouth,1044,Southampton FC,340,DRAW,,0,0
+328,233109,151,9,Huddersfield Town AFC,394,Liverpool FC,64,AWAY_TEAM,64,0,1
+329,233108,151,9,Everton FC,62,Crystal Palace FC,354,HOME_TEAM,62,2,0
+330,233106,151,9,Arsenal FC,57,Leicester City FC,338,HOME_TEAM,57,3,1
+331,233113,151,10,Fulham FC,63,AFC Bournemouth,1044,AWAY_TEAM,1044,0,3
+332,233114,151,10,Liverpool FC,64,Cardiff City FC,715,HOME_TEAM,64,4,1
+333,233119,151,10,Southampton FC,340,Newcastle United FC,67,DRAW,,0,0
+334,233121,151,10,Brighton & Hove Albion FC,397,Wolverhampton Wanderers FC,76,HOME_TEAM,397,1,0
+335,233122,151,10,Watford FC,346,Huddersfield Town AFC,394,HOME_TEAM,346,3,0
+336,233117,151,10,Leicester City FC,338,West Ham United FC,563,DRAW,,1,1
+337,233118,151,10,Burnley FC,328,Chelsea FC,61,AWAY_TEAM,61,0,4
+338,233120,151,10,Crystal Palace FC,354,Arsenal FC,57,DRAW,,2,2
+339,233116,151,10,Manchester United FC,66,Everton FC,62,HOME_TEAM,66,2,1
+340,233115,151,10,Tottenham Hotspur FC,73,Manchester City FC,65,AWAY_TEAM,65,0,1
+341,233132,151,11,AFC Bournemouth,1044,Manchester United FC,66,AWAY_TEAM,66,1,2
+342,233125,151,11,Newcastle United FC,67,Watford FC,346,HOME_TEAM,67,1,0
+343,233128,151,11,Everton FC,62,Brighton & Hove Albion FC,397,HOME_TEAM,62,3,1
+344,233130,151,11,Cardiff City FC,715,Leicester City FC,338,AWAY_TEAM,338,0,1
+345,233131,151,11,West Ham United FC,563,Burnley FC,328,HOME_TEAM,563,4,2
+346,233126,151,11,Arsenal FC,57,Liverpool FC,64,DRAW,,1,1
+347,233123,151,11,Wolverhampton Wanderers FC,76,Tottenham Hotspur FC,73,AWAY_TEAM,73,2,3
+348,233124,151,11,Manchester City FC,65,Southampton FC,340,HOME_TEAM,65,6,1
+349,233127,151,11,Chelsea FC,61,Crystal Palace FC,354,HOME_TEAM,61,3,1
+350,233129,151,11,Huddersfield Town AFC,394,Fulham FC,63,HOME_TEAM,394,1,0
+351,233140,151,12,Cardiff City FC,715,Brighton & Hove Albion FC,397,HOME_TEAM,715,2,1
+352,233135,151,12,Newcastle United FC,67,AFC Bournemouth,1044,HOME_TEAM,67,2,1
+353,233138,151,12,Leicester City FC,338,Burnley FC,328,DRAW,,0,0
+354,233139,151,12,Huddersfield Town AFC,394,West Ham United FC,563,DRAW,,1,1
+355,233141,151,12,Southampton FC,340,Watford FC,346,DRAW,,1,1
+356,233142,151,12,Crystal Palace FC,354,Tottenham Hotspur FC,73,AWAY_TEAM,73,0,1
+357,233133,151,12,Liverpool FC,64,Fulham FC,63,HOME_TEAM,64,2,0
+358,233137,151,12,Chelsea FC,61,Everton FC,62,DRAW,,0,0
+359,233134,151,12,Manchester City FC,65,Manchester United FC,66,HOME_TEAM,65,3,1
+360,233136,151,12,Arsenal FC,57,Wolverhampton Wanderers FC,76,DRAW,,1,1
+361,233144,151,13,Fulham FC,63,Southampton FC,340,HOME_TEAM,63,3,2
+362,233146,151,13,Everton FC,62,Cardiff City FC,715,HOME_TEAM,62,1,0
+363,233147,151,13,Manchester United FC,66,Crystal Palace FC,354,DRAW,,0,0
+364,233149,151,13,West Ham United FC,563,Manchester City FC,65,AWAY_TEAM,65,0,4
+365,233150,151,13,Brighton & Hove Albion FC,397,Leicester City FC,338,DRAW,,1,1
+366,233151,151,13,Watford FC,346,Liverpool FC,64,AWAY_TEAM,64,0,3
+367,233145,151,13,Tottenham Hotspur FC,73,Chelsea FC,61,HOME_TEAM,73,3,1
+368,233152,151,13,AFC Bournemouth,1044,Arsenal FC,57,AWAY_TEAM,57,1,2
+369,233143,151,13,Wolverhampton Wanderers FC,76,Huddersfield Town AFC,394,AWAY_TEAM,394,0,2
+370,233148,151,13,Burnley FC,328,Newcastle United FC,67,AWAY_TEAM,67,1,2
+371,233160,151,14,Cardiff City FC,715,Wolverhampton Wanderers FC,76,HOME_TEAM,715,2,1
+372,233154,151,14,Manchester City FC,65,AFC Bournemouth,1044,HOME_TEAM,65,3,1
+373,233155,151,14,Newcastle United FC,67,West Ham United FC,563,AWAY_TEAM,563,0,3
+374,233158,151,14,Leicester City FC,338,Watford FC,346,HOME_TEAM,338,2,0
+375,233159,151,14,Huddersfield Town AFC,394,Brighton & Hove Albion FC,397,AWAY_TEAM,397,1,2
+376,233162,151,14,Crystal Palace FC,354,Burnley FC,328,HOME_TEAM,354,2,0
+377,233161,151,14,Southampton FC,340,Manchester United FC,66,DRAW,,2,2
+378,233157,151,14,Chelsea FC,61,Fulham FC,63,HOME_TEAM,61,2,0
+379,233156,151,14,Arsenal FC,57,Tottenham Hotspur FC,73,HOME_TEAM,57,4,2
+380,233153,151,14,Liverpool FC,64,Everton FC,62,HOME_TEAM,64,1,0
+381,233167,151,15,West Ham United FC,563,Cardiff City FC,715,HOME_TEAM,563,3,1
+382,233168,151,15,Brighton & Hove Albion FC,397,Crystal Palace FC,354,HOME_TEAM,397,3,1
+383,233170,151,15,AFC Bournemouth,1044,Huddersfield Town AFC,394,HOME_TEAM,1044,2,1
+384,233169,151,15,Watford FC,346,Manchester City FC,65,AWAY_TEAM,65,1,2
+385,233163,151,15,Wolverhampton Wanderers FC,76,Chelsea FC,61,HOME_TEAM,76,2,1
+386,233164,151,15,Fulham FC,63,Leicester City FC,338,DRAW,,1,1
+387,233166,151,15,Burnley FC,328,Liverpool FC,64,AWAY_TEAM,64,1,3
+388,233172,151,15,Everton FC,62,Newcastle United FC,67,DRAW,,1,1
+389,233165,151,15,Manchester United FC,66,Arsenal FC,57,DRAW,,2,2
+390,233171,151,15,Tottenham Hotspur FC,73,Southampton FC,340,HOME_TEAM,73,3,1
+391,233182,151,16,AFC Bournemouth,1044,Liverpool FC,64,AWAY_TEAM,64,0,4
+392,233174,151,16,Arsenal FC,57,Huddersfield Town AFC,394,HOME_TEAM,57,1,0
+393,233177,151,16,Manchester United FC,66,Fulham FC,63,HOME_TEAM,66,4,1
+394,233179,151,16,Burnley FC,328,Brighton & Hove Albion FC,397,HOME_TEAM,328,1,0
+395,233180,151,16,Cardiff City FC,715,Southampton FC,340,HOME_TEAM,715,1,0
+396,233181,151,16,West Ham United FC,563,Crystal Palace FC,354,HOME_TEAM,563,3,2
+397,233175,151,16,Chelsea FC,61,Manchester City FC,65,HOME_TEAM,61,2,0
+398,233178,151,16,Leicester City FC,338,Tottenham Hotspur FC,73,AWAY_TEAM,73,0,2
+399,233173,151,16,Newcastle United FC,67,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,1,2
+400,233176,151,16,Everton FC,62,Watford FC,346,DRAW,,2,2
+401,233186,151,17,Manchester City FC,65,Everton FC,62,HOME_TEAM,65,3,1
+402,233183,151,17,Wolverhampton Wanderers FC,76,AFC Bournemouth,1044,HOME_TEAM,76,2,0
+403,233187,151,17,Tottenham Hotspur FC,73,Burnley FC,328,HOME_TEAM,73,1,0
+404,233188,151,17,Huddersfield Town AFC,394,Newcastle United FC,67,AWAY_TEAM,67,0,1
+405,233190,151,17,Crystal Palace FC,354,Leicester City FC,338,HOME_TEAM,354,1,0
+406,233192,151,17,Watford FC,346,Cardiff City FC,715,HOME_TEAM,346,3,2
+407,233184,151,17,Fulham FC,63,West Ham United FC,563,AWAY_TEAM,563,0,2
+408,233189,151,17,Southampton FC,340,Arsenal FC,57,HOME_TEAM,340,3,2
+409,233191,151,17,Brighton & Hove Albion FC,397,Chelsea FC,61,AWAY_TEAM,61,1,2
+410,233185,151,17,Liverpool FC,64,Manchester United FC,66,HOME_TEAM,64,3,1
+411,233193,151,18,Wolverhampton Wanderers FC,76,Liverpool FC,64,AWAY_TEAM,64,0,2
+412,233196,151,18,Arsenal FC,57,Burnley FC,328,HOME_TEAM,57,3,1
+413,233194,151,18,Manchester City FC,65,Crystal Palace FC,354,AWAY_TEAM,354,2,3
+414,233195,151,18,Newcastle United FC,67,Fulham FC,63,DRAW,,0,0
+415,233197,151,18,Chelsea FC,61,Leicester City FC,338,AWAY_TEAM,338,0,1
+416,233199,151,18,Huddersfield Town AFC,394,Southampton FC,340,AWAY_TEAM,340,1,3
+417,233201,151,18,West Ham United FC,563,Watford FC,346,AWAY_TEAM,346,0,2
+418,233202,151,18,AFC Bournemouth,1044,Brighton & Hove Albion FC,397,HOME_TEAM,1044,2,0
+419,233200,151,18,Cardiff City FC,715,Manchester United FC,66,AWAY_TEAM,66,1,5
+420,233198,151,18,Everton FC,62,Tottenham Hotspur FC,73,AWAY_TEAM,73,2,6
+421,233203,151,19,Fulham FC,63,Wolverhampton Wanderers FC,76,DRAW,,1,1
+422,233204,151,19,Liverpool FC,64,Newcastle United FC,67,HOME_TEAM,64,4,0
+423,233205,151,19,Tottenham Hotspur FC,73,AFC Bournemouth,1044,HOME_TEAM,73,5,0
+424,233206,151,19,Manchester United FC,66,Huddersfield Town AFC,394,HOME_TEAM,66,3,1
+425,233207,151,19,Leicester City FC,338,Manchester City FC,65,HOME_TEAM,338,2,1
+426,233208,151,19,Burnley FC,328,Everton FC,62,AWAY_TEAM,62,1,5
+427,233210,151,19,Crystal Palace FC,354,Cardiff City FC,715,DRAW,,0,0
+428,233211,151,19,Brighton & Hove Albion FC,397,Arsenal FC,57,DRAW,,1,1
+429,233212,151,19,Watford FC,346,Chelsea FC,61,AWAY_TEAM,61,1,2
+430,233209,151,19,Southampton FC,340,West Ham United FC,563,AWAY_TEAM,563,1,2
+431,233217,151,20,Leicester City FC,338,Cardiff City FC,715,AWAY_TEAM,715,0,1
+432,233221,151,20,Brighton & Hove Albion FC,397,Everton FC,62,HOME_TEAM,397,1,0
+433,233222,151,20,Watford FC,346,Newcastle United FC,67,DRAW,,1,1
+434,233213,151,20,Fulham FC,63,Huddersfield Town AFC,394,HOME_TEAM,63,1,0
+435,233215,151,20,Tottenham Hotspur FC,73,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,1,3
+436,233214,151,20,Liverpool FC,64,Arsenal FC,57,HOME_TEAM,64,5,1
+437,233220,151,20,Crystal Palace FC,354,Chelsea FC,61,AWAY_TEAM,61,0,1
+438,233218,151,20,Burnley FC,328,West Ham United FC,563,HOME_TEAM,328,2,0
+439,233219,151,20,Southampton FC,340,Manchester City FC,65,AWAY_TEAM,65,1,3
+440,233216,151,20,Manchester United FC,66,AFC Bournemouth,1044,HOME_TEAM,66,4,1
+441,233228,151,21,Everton FC,62,Leicester City FC,338,AWAY_TEAM,338,0,1
+442,233226,151,21,Arsenal FC,57,Fulham FC,63,HOME_TEAM,57,4,1
+443,233230,151,21,Cardiff City FC,715,Tottenham Hotspur FC,73,AWAY_TEAM,73,0,3
+444,233223,151,21,Wolverhampton Wanderers FC,76,Crystal Palace FC,354,AWAY_TEAM,354,0,2
+445,233227,151,21,Chelsea FC,61,Southampton FC,340,DRAW,,0,0
+446,233229,151,21,Huddersfield Town AFC,394,Burnley FC,328,AWAY_TEAM,328,1,2
+447,233231,151,21,West Ham United FC,563,Brighton & Hove Albion FC,397,DRAW,,2,2
+448,233232,151,21,AFC Bournemouth,1044,Watford FC,346,DRAW,,3,3
+449,233225,151,21,Newcastle United FC,67,Manchester United FC,66,AWAY_TEAM,66,0,2
+450,233224,151,21,Manchester City FC,65,Liverpool FC,64,HOME_TEAM,65,2,1
+451,233240,151,22,West Ham United FC,563,Arsenal FC,57,HOME_TEAM,563,1,0
+452,233237,151,22,Leicester City FC,338,Southampton FC,340,AWAY_TEAM,340,1,2
+453,233238,151,22,Burnley FC,328,Fulham FC,63,HOME_TEAM,328,2,1
+454,233239,151,22,Cardiff City FC,715,Huddersfield Town AFC,394,DRAW,,0,0
+455,233241,151,22,Crystal Palace FC,354,Watford FC,346,AWAY_TEAM,346,1,2
+456,233242,151,22,Brighton & Hove Albion FC,397,Liverpool FC,64,AWAY_TEAM,64,0,1
+457,233234,151,22,Chelsea FC,61,Newcastle United FC,67,HOME_TEAM,61,2,1
+458,233236,151,22,Everton FC,62,AFC Bournemouth,1044,HOME_TEAM,62,2,0
+459,233235,151,22,Tottenham Hotspur FC,73,Manchester United FC,66,AWAY_TEAM,66,0,1
+460,233233,151,22,Manchester City FC,65,Wolverhampton Wanderers FC,76,HOME_TEAM,65,3,0
+461,233243,151,23,Wolverhampton Wanderers FC,76,Leicester City FC,338,HOME_TEAM,76,4,3
+462,233245,151,23,Liverpool FC,64,Crystal Palace FC,354,HOME_TEAM,64,4,3
+463,233246,151,23,Newcastle United FC,67,Cardiff City FC,715,HOME_TEAM,67,3,0
+464,233248,151,23,Manchester United FC,66,Brighton & Hove Albion FC,397,HOME_TEAM,66,2,1
+465,233250,151,23,Southampton FC,340,Everton FC,62,HOME_TEAM,340,2,1
+466,233251,151,23,Watford FC,346,Burnley FC,328,DRAW,,0,0
+467,233252,151,23,AFC Bournemouth,1044,West Ham United FC,563,HOME_TEAM,1044,2,0
+468,233247,151,23,Arsenal FC,57,Chelsea FC,61,HOME_TEAM,57,2,0
+469,233249,151,23,Huddersfield Town AFC,394,Manchester City FC,65,AWAY_TEAM,65,0,3
+470,233244,151,23,Fulham FC,63,Tottenham Hotspur FC,73,AWAY_TEAM,73,1,2
+471,233253,151,24,Wolverhampton Wanderers FC,76,West Ham United FC,563,HOME_TEAM,76,3,0
+472,233254,151,24,Fulham FC,63,Brighton & Hove Albion FC,397,HOME_TEAM,63,4,2
+473,233255,151,24,Arsenal FC,57,Cardiff City FC,715,HOME_TEAM,57,2,1
+474,233257,151,24,Huddersfield Town AFC,394,Everton FC,62,AWAY_TEAM,62,0,1
+475,233256,151,24,Manchester United FC,66,Burnley FC,328,DRAW,,2,2
+476,233260,151,24,Newcastle United FC,67,Manchester City FC,65,HOME_TEAM,67,2,1
+477,233258,151,24,AFC Bournemouth,1044,Chelsea FC,61,HOME_TEAM,1044,4,0
+478,233262,151,24,Southampton FC,340,Crystal Palace FC,354,DRAW,,1,1
+479,233259,151,24,Liverpool FC,64,Leicester City FC,338,DRAW,,1,1
+480,233261,151,24,Tottenham Hotspur FC,73,Watford FC,346,HOME_TEAM,73,2,1
+481,233265,151,25,Tottenham Hotspur FC,73,Newcastle United FC,67,HOME_TEAM,73,1,0
+482,233264,151,25,Chelsea FC,61,Huddersfield Town AFC,394,HOME_TEAM,61,5,0
+483,233266,151,25,Everton FC,62,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,1,3
+484,233268,151,25,Burnley FC,328,Southampton FC,340,DRAW,,1,1
+485,233271,151,25,Crystal Palace FC,354,Fulham FC,63,HOME_TEAM,354,2,0
+486,233272,151,25,Brighton & Hove Albion FC,397,Watford FC,346,DRAW,,0,0
+487,233269,151,25,Cardiff City FC,715,AFC Bournemouth,1044,HOME_TEAM,715,2,0
+488,233267,151,25,Leicester City FC,338,Manchester United FC,66,AWAY_TEAM,66,0,1
+489,233263,151,25,Manchester City FC,65,Arsenal FC,57,HOME_TEAM,65,3,1
+490,233270,151,25,West Ham United FC,563,Liverpool FC,64,DRAW,,1,1
+491,233274,151,26,Fulham FC,63,Manchester United FC,66,AWAY_TEAM,66,0,3
+492,233275,151,26,Liverpool FC,64,AFC Bournemouth,1044,HOME_TEAM,64,3,0
+493,233278,151,26,Huddersfield Town AFC,394,Arsenal FC,57,AWAY_TEAM,57,1,2
+494,233279,151,26,Southampton FC,340,Cardiff City FC,715,AWAY_TEAM,715,1,2
+495,233280,151,26,Crystal Palace FC,354,West Ham United FC,563,DRAW,,1,1
+496,233282,151,26,Watford FC,346,Everton FC,62,HOME_TEAM,346,1,0
+497,233281,151,26,Brighton & Hove Albion FC,397,Burnley FC,328,AWAY_TEAM,328,1,3
+498,233277,151,26,Tottenham Hotspur FC,73,Leicester City FC,338,HOME_TEAM,73,3,1
+499,233276,151,26,Manchester City FC,65,Chelsea FC,61,HOME_TEAM,65,6,0
+500,233273,151,26,Wolverhampton Wanderers FC,76,Newcastle United FC,67,DRAW,,1,1
+501,233286,151,27,Everton FC,62,Manchester City FC,65,AWAY_TEAM,65,0,2
+502,233290,151,27,Cardiff City FC,715,Watford FC,346,AWAY_TEAM,346,1,5
+503,233291,151,27,West Ham United FC,563,Fulham FC,63,HOME_TEAM,563,3,1
+504,233289,151,27,Burnley FC,328,Tottenham Hotspur FC,73,HOME_TEAM,328,2,1
+505,233283,151,27,Newcastle United FC,67,Huddersfield Town AFC,394,HOME_TEAM,67,2,0
+506,233292,151,27,AFC Bournemouth,1044,Wolverhampton Wanderers FC,76,DRAW,,1,1
+507,233288,151,27,Leicester City FC,338,Crystal Palace FC,354,AWAY_TEAM,354,1,4
+508,233284,151,27,Arsenal FC,57,Southampton FC,340,HOME_TEAM,57,2,0
+509,233287,151,27,Manchester United FC,66,Liverpool FC,64,DRAW,,0,0
+510,233285,151,27,Chelsea FC,61,Brighton & Hove Albion FC,397,HOME_TEAM,61,3,0
+511,233294,151,28,Leicester City FC,338,Brighton & Hove Albion FC,397,HOME_TEAM,338,2,1
+512,233295,151,28,Huddersfield Town AFC,394,Wolverhampton Wanderers FC,76,HOME_TEAM,394,1,0
+513,233296,151,28,Cardiff City FC,715,Everton FC,62,AWAY_TEAM,62,0,3
+514,233300,151,28,Newcastle United FC,67,Burnley FC,328,HOME_TEAM,67,2,0
+515,233293,151,28,Arsenal FC,57,AFC Bournemouth,1044,HOME_TEAM,57,5,1
+516,233302,151,28,Southampton FC,340,Fulham FC,63,HOME_TEAM,340,2,0
+517,233297,151,28,Crystal Palace FC,354,Manchester United FC,66,AWAY_TEAM,66,1,3
+518,233298,151,28,Liverpool FC,64,Watford FC,346,HOME_TEAM,64,5,0
+519,233299,151,28,Manchester City FC,65,West Ham United FC,563,HOME_TEAM,65,1,0
+520,233301,151,28,Chelsea FC,61,Tottenham Hotspur FC,73,HOME_TEAM,61,2,0
+521,233305,151,29,Tottenham Hotspur FC,73,Arsenal FC,57,DRAW,,1,1
+522,233303,151,29,Wolverhampton Wanderers FC,76,Cardiff City FC,715,HOME_TEAM,76,2,0
+523,233307,151,29,Manchester United FC,66,Southampton FC,340,HOME_TEAM,66,3,2
+524,233308,151,29,Burnley FC,328,Crystal Palace FC,354,AWAY_TEAM,354,1,3
+525,233310,151,29,Brighton & Hove Albion FC,397,Huddersfield Town AFC,394,HOME_TEAM,397,1,0
+526,233312,151,29,AFC Bournemouth,1044,Manchester City FC,65,AWAY_TEAM,65,0,1
+527,233309,151,29,West Ham United FC,563,Newcastle United FC,67,HOME_TEAM,563,2,0
+528,233311,151,29,Watford FC,346,Leicester City FC,338,HOME_TEAM,346,2,1
+529,233304,151,29,Fulham FC,63,Chelsea FC,61,AWAY_TEAM,61,1,2
+530,233306,151,29,Everton FC,62,Liverpool FC,64,DRAW,,0,0
+531,233322,151,30,Crystal Palace FC,354,Brighton & Hove Albion FC,397,AWAY_TEAM,397,1,2
+532,233315,151,30,Newcastle United FC,67,Everton FC,62,HOME_TEAM,67,3,2
+533,233318,151,30,Leicester City FC,338,Fulham FC,63,HOME_TEAM,338,3,1
+534,233319,151,30,Huddersfield Town AFC,394,AFC Bournemouth,1044,AWAY_TEAM,1044,0,2
+535,233320,151,30,Cardiff City FC,715,West Ham United FC,563,HOME_TEAM,715,2,0
+536,233321,151,30,Southampton FC,340,Tottenham Hotspur FC,73,HOME_TEAM,340,2,1
+537,233314,151,30,Manchester City FC,65,Watford FC,346,HOME_TEAM,65,3,1
+538,233313,151,30,Liverpool FC,64,Burnley FC,328,HOME_TEAM,64,4,2
+539,233317,151,30,Chelsea FC,61,Wolverhampton Wanderers FC,76,DRAW,,1,1
+540,233316,151,30,Arsenal FC,57,Manchester United FC,66,HOME_TEAM,57,2,0
+541,233328,151,31,Burnley FC,328,Leicester City FC,338,AWAY_TEAM,338,1,2
+542,233329,151,31,West Ham United FC,563,Huddersfield Town AFC,394,HOME_TEAM,563,4,3
+543,233332,151,31,AFC Bournemouth,1044,Newcastle United FC,67,DRAW,,2,2
+544,233324,151,31,Fulham FC,63,Liverpool FC,64,AWAY_TEAM,64,1,2
+545,233326,151,31,Everton FC,62,Chelsea FC,61,HOME_TEAM,62,2,0
+546,233325,151,31,Tottenham Hotspur FC,73,Crystal Palace FC,354,HOME_TEAM,73,2,0
+547,233330,151,31,Brighton & Hove Albion FC,397,Cardiff City FC,715,AWAY_TEAM,715,0,2
+548,233331,151,31,Watford FC,346,Southampton FC,340,DRAW,,1,1
+549,233323,151,31,Wolverhampton Wanderers FC,76,Arsenal FC,57,HOME_TEAM,76,3,1
+550,233327,151,31,Manchester United FC,66,Manchester City FC,65,AWAY_TEAM,65,0,2
+551,233333,151,32,Fulham FC,63,Manchester City FC,65,AWAY_TEAM,65,0,2
+552,233336,151,32,Manchester United FC,66,Watford FC,346,HOME_TEAM,66,2,1
+553,233337,151,32,Leicester City FC,338,AFC Bournemouth,1044,HOME_TEAM,338,2,0
+554,233338,151,32,Burnley FC,328,Wolverhampton Wanderers FC,76,HOME_TEAM,328,2,0
+555,233341,151,32,Crystal Palace FC,354,Huddersfield Town AFC,394,HOME_TEAM,354,2,0
+556,233342,151,32,Brighton & Hove Albion FC,397,Southampton FC,340,AWAY_TEAM,340,0,1
+557,233340,151,32,West Ham United FC,563,Everton FC,62,AWAY_TEAM,62,0,2
+558,233339,151,32,Cardiff City FC,715,Chelsea FC,61,AWAY_TEAM,61,1,2
+559,233334,151,32,Liverpool FC,64,Tottenham Hotspur FC,73,HOME_TEAM,64,2,1
+560,233335,151,32,Arsenal FC,57,Newcastle United FC,67,HOME_TEAM,57,2,0
+561,233343,151,33,Wolverhampton Wanderers FC,76,Manchester United FC,66,HOME_TEAM,76,2,1
+562,233351,151,33,Watford FC,346,Fulham FC,63,HOME_TEAM,346,4,1
+563,233344,151,33,Manchester City FC,65,Cardiff City FC,715,HOME_TEAM,65,2,0
+564,233350,151,33,Southampton FC,340,Liverpool FC,64,AWAY_TEAM,64,1,3
+565,233345,151,33,Newcastle United FC,67,Crystal Palace FC,354,AWAY_TEAM,354,0,1
+566,233349,151,33,Huddersfield Town AFC,394,Leicester City FC,338,AWAY_TEAM,338,1,4
+567,233352,151,33,AFC Bournemouth,1044,Burnley FC,328,AWAY_TEAM,328,1,3
+568,233348,151,33,Everton FC,62,Arsenal FC,57,HOME_TEAM,62,1,0
+569,233346,151,33,Chelsea FC,61,West Ham United FC,563,HOME_TEAM,61,2,0
+570,233347,151,33,Tottenham Hotspur FC,73,Brighton & Hove Albion FC,397,HOME_TEAM,73,1,0
+571,233357,151,34,Leicester City FC,338,Newcastle United FC,67,AWAY_TEAM,67,0,1
+572,233355,151,34,Tottenham Hotspur FC,73,Huddersfield Town AFC,394,HOME_TEAM,73,4,0
+573,233353,151,34,Fulham FC,63,Everton FC,62,HOME_TEAM,63,2,0
+574,233358,151,34,Burnley FC,328,Cardiff City FC,715,HOME_TEAM,328,2,0
+575,233359,151,34,Southampton FC,340,Wolverhampton Wanderers FC,76,HOME_TEAM,340,3,1
+576,233361,151,34,Brighton & Hove Albion FC,397,AFC Bournemouth,1044,AWAY_TEAM,1044,0,5
+577,233356,151,34,Manchester United FC,66,West Ham United FC,563,HOME_TEAM,66,2,1
+578,233360,151,34,Crystal Palace FC,354,Manchester City FC,65,AWAY_TEAM,65,1,3
+579,233354,151,34,Liverpool FC,64,Chelsea FC,61,HOME_TEAM,64,2,0
+580,233362,151,34,Watford FC,346,Arsenal FC,57,AWAY_TEAM,57,0,1
+581,233364,151,35,Manchester City FC,65,Tottenham Hotspur FC,73,HOME_TEAM,65,1,0
+582,233363,151,35,Wolverhampton Wanderers FC,76,Brighton & Hove Albion FC,397,DRAW,,0,0
+583,233369,151,35,Huddersfield Town AFC,394,Watford FC,346,AWAY_TEAM,346,1,2
+584,233371,151,35,West Ham United FC,563,Leicester City FC,338,DRAW,,2,2
+585,233372,151,35,AFC Bournemouth,1044,Fulham FC,63,AWAY_TEAM,63,0,1
+586,233365,151,35,Newcastle United FC,67,Southampton FC,340,HOME_TEAM,67,3,1
+587,233368,151,35,Everton FC,62,Manchester United FC,66,HOME_TEAM,62,4,0
+588,233366,151,35,Arsenal FC,57,Crystal Palace FC,354,AWAY_TEAM,354,2,3
+589,233370,151,35,Cardiff City FC,715,Liverpool FC,64,AWAY_TEAM,64,0,2
+590,233367,151,35,Chelsea FC,61,Burnley FC,328,DRAW,,2,2
+591,233374,151,36,Liverpool FC,64,Huddersfield Town AFC,394,HOME_TEAM,64,5,0
+592,233375,151,36,Tottenham Hotspur FC,73,West Ham United FC,563,AWAY_TEAM,563,0,1
+593,233373,151,36,Fulham FC,63,Cardiff City FC,715,HOME_TEAM,63,1,0
+594,233379,151,36,Southampton FC,340,AFC Bournemouth,1044,DRAW,,3,3
+595,233380,151,36,Crystal Palace FC,354,Everton FC,62,DRAW,,0,0
+596,233382,151,36,Watford FC,346,Wolverhampton Wanderers FC,76,AWAY_TEAM,76,1,2
+597,233381,151,36,Brighton & Hove Albion FC,397,Newcastle United FC,67,DRAW,,1,1
+598,233377,151,36,Leicester City FC,338,Arsenal FC,57,HOME_TEAM,338,3,0
+599,233378,151,36,Burnley FC,328,Manchester City FC,65,AWAY_TEAM,65,0,1
+600,233376,151,36,Manchester United FC,66,Chelsea FC,61,DRAW,,1,1
+601,233388,151,37,Everton FC,62,Burnley FC,328,HOME_TEAM,62,2,0
+602,233392,151,37,AFC Bournemouth,1044,Tottenham Hotspur FC,73,HOME_TEAM,1044,1,0
+603,233383,151,37,Wolverhampton Wanderers FC,76,Fulham FC,63,HOME_TEAM,76,1,0
+604,233391,151,37,West Ham United FC,563,Southampton FC,340,HOME_TEAM,563,3,0
+605,233390,151,37,Cardiff City FC,715,Crystal Palace FC,354,AWAY_TEAM,354,2,3
+606,233385,151,37,Newcastle United FC,67,Liverpool FC,64,AWAY_TEAM,64,2,3
+607,233387,151,37,Chelsea FC,61,Watford FC,346,HOME_TEAM,61,3,0
+608,233389,151,37,Huddersfield Town AFC,394,Manchester United FC,66,DRAW,,1,1
+609,233386,151,37,Arsenal FC,57,Brighton & Hove Albion FC,397,DRAW,,1,1
+610,233384,151,37,Manchester City FC,65,Leicester City FC,338,HOME_TEAM,65,1,0
+611,233393,151,38,Fulham FC,63,Newcastle United FC,67,AWAY_TEAM,67,0,4
+612,233394,151,38,Liverpool FC,64,Wolverhampton Wanderers FC,76,HOME_TEAM,64,2,0
+613,233395,151,38,Tottenham Hotspur FC,73,Everton FC,62,DRAW,,2,2
+614,233396,151,38,Manchester United FC,66,Cardiff City FC,715,AWAY_TEAM,715,0,2
+615,233397,151,38,Leicester City FC,338,Chelsea FC,61,DRAW,,0,0
+616,233398,151,38,Burnley FC,328,Arsenal FC,57,AWAY_TEAM,57,1,3
+617,233399,151,38,Southampton FC,340,Huddersfield Town AFC,394,DRAW,,1,1
+618,233400,151,38,Crystal Palace FC,354,AFC Bournemouth,1044,HOME_TEAM,354,5,3
+619,233401,151,38,Brighton & Hove Albion FC,397,Manchester City FC,65,AWAY_TEAM,65,1,4
+620,233402,151,38,Watford FC,346,West Ham United FC,563,AWAY_TEAM,563,1,4
