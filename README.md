@@ -20,7 +20,8 @@ Content-Type: application/json
 
 {
 	"Competition" : "PL",
-	"Matchday" : 1
+	"Matchday" : 1,
+	"Season" : 2018
 }
 ```
 
@@ -28,7 +29,10 @@ Content-Type: application/json
 
 ```
 SELECT 
+CAST("public"."Matches"."Id" as REAL) as "Id",
+CAST("public"."Matches"."MatchId" as REAL) as "MatchId", 
 CAST("public"."Matches"."SeasonId" as REAL) as "SeasonId", 
+"public"."Matches"."Matchday",
 "public"."Matches"."HomeTeam",
 CAST("public"."Matches"."HomeTeamId" as REAL) as "HomeTeamId", 
 "public"."Matches"."AwayTeam",

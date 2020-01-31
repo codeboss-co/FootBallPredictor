@@ -3,6 +3,7 @@ using FootballPredictor.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
+using FootballPredictorML.Model;
 
 namespace FootballPredictor.Api.Application.MatchDay.Controllers
 {
@@ -25,6 +26,18 @@ namespace FootballPredictor.Api.Application.MatchDay.Controllers
             await _matchData.Handle(command, token);
 
             return Ok();
+        }
+
+        [HttpGet("predict")]
+        public async Task<IActionResult> Predict([FromBody] PredictMatchOutcome command, CancellationToken token)
+        {
+            var prediction = ConsumeModel.Predict(new ModelInput
+            {
+                HomeTeam = command.HomeTeam,
+                AwayTeam = command.AwayTeam
+            });
+
+            return Ok(prediction);
         }
     }
 }

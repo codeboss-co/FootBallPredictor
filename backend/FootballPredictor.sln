@@ -29,13 +29,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictor.Data.InMe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictor.Api.Tests", "test\FootballPredictor.Api.Tests\FootballPredictor.Api.Tests.csproj", "{A6379876-8878-424C-9E19-6D68D53461B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballPredictor.FootballDataProvider.Http", "src\libraries\FootballPredictor.FootballDataProvider.Http\FootballPredictor.FootballDataProvider.Http.csproj", "{774B9134-65C3-4BAE-BC01-C46C8AD1AF04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictor.FootballDataProvider.Http", "src\libraries\FootballPredictor.FootballDataProvider.Http\FootballPredictor.FootballDataProvider.Http.csproj", "{774B9134-65C3-4BAE-BC01-C46C8AD1AF04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballPredictor.Dto", "src\libraries\FootballPredictor.Dto\FootballPredictor.Dto.csproj", "{88A329E9-4AB2-40EA-84D0-57FB791E264C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictor.Dto", "src\libraries\FootballPredictor.Dto\FootballPredictor.Dto.csproj", "{88A329E9-4AB2-40EA-84D0-57FB791E264C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballPredictor.Data.EFCore.PostgreSQL", "src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\FootballPredictor.Data.EFCore.PostgreSQL.csproj", "{3444290E-BB91-4874-A8FF-3053E1BACE1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictor.Data.EFCore.PostgreSQL", "src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\FootballPredictor.Data.EFCore.PostgreSQL.csproj", "{3444290E-BB91-4874-A8FF-3053E1BACE1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballPredictor.ML.Console", "src\hosts\FootballPredictor.ML.Console\FootballPredictor.ML.Console.csproj", "{795B0ECB-9C1B-443F-BF0B-ABAAE07A19C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictor.ML.Console", "src\hosts\FootballPredictor.ML.Console\FootballPredictor.ML.Console.csproj", "{795B0ECB-9C1B-443F-BF0B-ABAAE07A19C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictorML.Model", "FootballPredictorML.Model\FootballPredictorML.Model.csproj", "{A0DDF731-378D-4907-A049-4E179C441907}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballPredictorML.ConsoleApp", "FootballPredictorML.ConsoleApp\FootballPredictorML.ConsoleApp.csproj", "{756E423E-93BC-4492-A9C2-AD5AC4F3D428}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +195,30 @@ Global
 		{795B0ECB-9C1B-443F-BF0B-ABAAE07A19C9}.Release|x64.Build.0 = Release|Any CPU
 		{795B0ECB-9C1B-443F-BF0B-ABAAE07A19C9}.Release|x86.ActiveCfg = Release|Any CPU
 		{795B0ECB-9C1B-443F-BF0B-ABAAE07A19C9}.Release|x86.Build.0 = Release|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Debug|x64.Build.0 = Debug|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Release|x64.ActiveCfg = Release|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Release|x64.Build.0 = Release|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0DDF731-378D-4907-A049-4E179C441907}.Release|x86.Build.0 = Release|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Debug|x64.Build.0 = Debug|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Debug|x86.Build.0 = Debug|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Release|x64.ActiveCfg = Release|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Release|x64.Build.0 = Release|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Release|x86.ActiveCfg = Release|Any CPU
+		{756E423E-93BC-4492-A9C2-AD5AC4F3D428}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
