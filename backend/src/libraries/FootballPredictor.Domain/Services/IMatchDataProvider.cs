@@ -6,6 +6,6 @@ namespace FootballPredictor.Domain.Services
 {
     public interface IMatchDataProvider
     {
-        Task<MatchDayData> GetMatchDayDataAsync(string competition, int matchday, CancellationToken token = default);
+        Task<MatchDayData> GetMatchDayDataAsync(string competition, int matchday, int? season = null,CancellationToken token = default);
     }
 }

@@ -18,11 +18,12 @@ namespace FootballPredictor.FootballDataProvider.Http
 
         public FootballDataMatchDataProvider(IHttpClientFactory httpClientFactory) => _httpClientFactory = httpClientFactory;
 
-        public async Task<MatchDayData> GetMatchDayDataAsync(string competition, int matchday, CancellationToken token = default)
+        public async Task<MatchDayData> GetMatchDayDataAsync(string competition, int matchday, int? season = null, CancellationToken token = default)
         {
             var httpClient = _httpClientFactory.CreateClient("football-data");
 
-            var response = await httpClient.GetAsync($"/v2/competitions/{competition}/matches?matchday={matchday}", token)
+            var response = await httpClient.GetAsync(
+                    $"/v2/competitions/{competition}/matches?matchday={matchday}&season={season}", token)
                                             .ConfigureAwait(false);
 
             // www.football-data.org/documentation/api#response-headers

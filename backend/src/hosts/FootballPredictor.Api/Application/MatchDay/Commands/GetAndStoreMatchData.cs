@@ -12,6 +12,7 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
     {
         public string Competition { get; set; } = "PL";
         public int Matchday { get; set; } = 1;
+        public int? Season { get; set; } = 2020;
     }
 
     public class GetAndStoreMatchDataCommandHandler : ICommandHandler<GetAndStoreMatchData>
@@ -32,6 +33,7 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
             var matchData = await _matchDataProvider.GetMatchDayDataAsync(
                                                     competition:command.Competition, 
                                                     matchday:command.Matchday,
+                                                    season:command.Season,
                                                     token)
                                                 .ConfigureAwait(false);
 
