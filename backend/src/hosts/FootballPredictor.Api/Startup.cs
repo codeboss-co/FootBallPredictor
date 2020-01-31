@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace FootballPredictor.Api
 {
@@ -84,6 +85,7 @@ namespace FootballPredictor.Api
             }
 
             app.UseCors("CorsPolicy");
+            app.UseSerilogRequestLogging(); 
             // app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseApiResponseAndExceptionWrapper(); // Must be "before" the UseRouting()

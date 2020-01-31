@@ -31,8 +31,8 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
         {
             var matchData = await _matchDataProvider.GetMatchDayDataAsync(
                                                     competition:command.Competition, 
-                                                    matchday:command.Matchday, 
-                                                    accessToken:"eb80d76def304f6fb82a123b1fd826a1")
+                                                    matchday:command.Matchday,
+                                                    token)
                                                 .ConfigureAwait(false);
 
             var matchList = new List<Match>(matchData.Matches.Count);

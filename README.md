@@ -39,3 +39,7 @@ CAST("public"."Matches"."HomeTeamGoals" as REAL) as "HomeTeamGoals",
 CAST("public"."Matches"."AwayTeamGoals" as REAL) as "AwayTeamGoals"
 FROM "public"."Matches"
 ```
+
+## Logging
+
+> docker run -e ACCEPT_EULA=Y   -v /path/to/seq/data:/data   -p 80:80   -p 5341:5341   datalust/seq:latest
