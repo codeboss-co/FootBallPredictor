@@ -23,3 +23,19 @@ Content-Type: application/json
 	"Matchday" : 1
 }
 ```
+
+## Database ML Query
+
+```
+SELECT 
+CAST("public"."Matches"."SeasonId" as REAL) as "SeasonId", 
+"public"."Matches"."HomeTeam",
+CAST("public"."Matches"."HomeTeamId" as REAL) as "HomeTeamId", 
+"public"."Matches"."AwayTeam",
+CAST("public"."Matches"."AwayTeamId" as REAL) as "AwayTeamId", 
+"public"."Matches"."Winner",
+CAST("public"."Matches"."WinnerId" as REAL) as "WinnerId", 
+CAST("public"."Matches"."HomeTeamGoals" as REAL) as "HomeTeamGoals", 
+CAST("public"."Matches"."AwayTeamGoals" as REAL) as "AwayTeamGoals"
+FROM "public"."Matches"
+```
