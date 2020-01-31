@@ -15,18 +15,19 @@ namespace FootballPredictor.ML.Console
     {
         static async Task Main(string[] args)
         {
+            System.Console.Title = typeof(Program).Namespace.Split(".").First();
 
+            System.Console.WriteLine("Testing database connection");
             var connString = @"Host=rogue.db.elephantsql.com;Database=hhgfafoj;Username=hhgfafoj;Password=bxK--h2kwjxoblpg2JsN1AYIHLef0012";
             await using var conn = new NpgsqlConnection(connString);
             await conn.OpenAsync();
             conn.Close();
 
-            System.Console.Title = typeof(Program).Namespace.Split(".").First();
 
             //STEP 1: Create MLContext to be shared across the model creation workflow objects 
             var mlContext = new MLContext();
 
-            ////STEP 2:  Load data from a relational database requires  System.Data.SqlClient NuGet package
+            ////STEP 2:  Load data from a relational database requires  Database NuGet package
             DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<MatchData>();
             string connectionString = @"Host=rogue.db.elephantsql.com;Database=hhgfafoj;Username=hhgfafoj;Password=bxK--h2kwjxoblpg2JsN1AYIHLef0012";
             // Numerical data that is not of type Real has to be converted to Real
@@ -40,24 +41,46 @@ namespace FootballPredictor.ML.Console
 
 
             // Data process configuration with pipeline data transformations 
-            var dataProcessPipeline =
-                mlContext.Transforms.Conversion.MapValueToKey("Winner", "Winner")
+            var dataProcessPipeline = mlContext.Transforms.Conversion.MapValueToKey(
+                        outputColumnName: "Winner",
+                        inputColumnName: "Winner")
+
+                // one-hot encode all text features
                 .Append(mlContext.Transforms.Categorical.OneHotEncoding(
                     new[] { new InputOutputColumnPair("HomeTeam", "HomeTeam"),
-                        new InputOutputColumnPair("AwayTeam", "AwayTeam") }))
-                .Append(mlContext.Transforms.Concatenate("Features", new[] { "HomeTeam", "AwayTeam" }))
-                .Append(mlContext.Transforms.NormalizeMinMax("Features", "Features"))
+                               new InputOutputColumnPair("AwayTeam", "AwayTeam") }))
+
+                // combine all input features into a single column 
+                .Append(mlContext.Transforms.Concatenate(
+                    outputColumnName: "Features",
+                    inputColumnNames: new[] { "HomeTeam", "AwayTeam" }))
+
+                .Append(mlContext.Transforms.NormalizeMinMax(
+                    outputColumnName: "Features",
+                    inputColumnName: "Features"))
+
+                // cache the data to speed up training
                 .AppendCacheCheckpoint(mlContext);
 
             // Set the training algorithm 
-            var trainer = mlContext.MulticlassClassification.Trainers.OneVersusAll(mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(labelColumnName: "Winner", featureColumnName: "Features"), labelColumnName: "Winner")
-                .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel", "PredictedLabel"));
+            var trainer = mlContext.MulticlassClassification.Trainers.OneVersusAll(
+                    binaryEstimator:mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(
+                        labelColumnName: "Winner", featureColumnName: "Features"),
+                    labelColumnName: "Winner")
+                .Append(mlContext.Transforms.Conversion.MapKeyToValue(
+                    outputColumnName:"PredictedLabel", 
+                    inputColumnName:"PredictedLabel"));
+
             var trainingPipeline = dataProcessPipeline.Append(trainer);
 
             // Cross-Validate with single dataset (since we don't have two datasets, one for training and for evaluate)
             // in order to evaluate and get the model's accuracy metrics
             System.Console.WriteLine("=============== Cross-validating to get model's accuracy metrics ===============");
-            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(trainingDataView, trainingPipeline, numberOfFolds: 5, labelColumnName: "Winner");
+            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(
+                data:trainingDataView, 
+                estimator:trainingPipeline,
+                numberOfFolds: 5,
+                labelColumnName: "Winner");
             PrintMulticlassClassificationFoldsAverageMetrics(crossValidationResults);
 
             System.Console.WriteLine("=============== Training  model ===============");
@@ -65,12 +88,14 @@ namespace FootballPredictor.ML.Console
             System.Console.WriteLine("=============== End of training process ===============");
 
             // Make predictions
-            var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-            ModelOutput predictionResult = predEngine.Predict(new ModelInput
+            var modelInput = new ModelInput
             {
                 HomeTeam = "West Ham United FC",
                 AwayTeam = "Manchester City FC"
-            });
+            };
+
+            var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
+            ModelOutput predictionResult = predictionEngine.Predict(modelInput);
 
             // Show the prediction
             System.Console.WriteLine($"Single prediction:");
