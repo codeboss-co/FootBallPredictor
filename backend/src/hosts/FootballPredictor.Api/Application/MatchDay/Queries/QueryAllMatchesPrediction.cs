@@ -16,7 +16,7 @@ namespace FootballPredictor.Api.Application.MatchDay.Queries
 
     public class MatchDayPrediction : MatchFixtureDto
     {
-        public IDictionary<string, float> Prediction { get; set; }
+        public IDictionary<string, float> Predictions { get; set; }
     }
 
     public class PredictAllMatchesQueryHandler : IQueryHandler<QueryAllMatchesPrediction, IEnumerable<MatchDayPrediction>>
@@ -47,11 +47,11 @@ namespace FootballPredictor.Api.Application.MatchDay.Queries
                     AwayTeam = match.AwayTeam
                 });
 
-                predictions.Add(new MatchDayPrediction()
+                predictions.Add(new MatchDayPrediction
                 {
                     HomeTeam = match.HomeTeam,
                     AwayTeam = match.AwayTeam,
-                    Prediction = new Dictionary<string, float>
+                    Predictions = new Dictionary<string, float>
                     {
                         [match.HomeTeam] = prediction.Score[0] * 100,
                         [match.AwayTeam] = prediction.Score[1] * 100,

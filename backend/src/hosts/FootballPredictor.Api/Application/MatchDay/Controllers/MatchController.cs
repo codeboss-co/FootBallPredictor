@@ -43,6 +43,14 @@ namespace FootballPredictor.Api.Application.MatchDay.Controllers
             return Ok();
         }
 
+        [HttpPost("update-model")]
+        public async Task<IActionResult> UpdateModel(CancellationToken token)
+        {
+            FootballPredictorML.ConsoleApp.ModelBuilder.CreateModel();
+
+            return Ok();
+        }
+
         [HttpGet("predict")]
         public async Task<IActionResult> Predict([FromBody] PredictMatch command, CancellationToken token)
         {

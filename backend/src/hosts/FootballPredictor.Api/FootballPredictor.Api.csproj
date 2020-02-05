@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\FootballPredictorML.ConsoleApp\FootballPredictorML.ConsoleApp.csproj" />
     <ProjectReference Include="..\..\..\FootballPredictorML.Model\FootballPredictorML.Model.csproj" />
     <ProjectReference Include="..\..\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\FootballPredictor.Data.EFCore.PostgreSQL.csproj" />
     <ProjectReference Include="..\..\libraries\Data\FootballPredictor.Data.InMemory\FootballPredictor.Data.InMemory.csproj" />

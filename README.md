@@ -58,6 +58,12 @@ Content-Type: application/json
 }
 ```
 
+```
+POST /match/update-model HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+```
+
 
 ## Database ML Query
 

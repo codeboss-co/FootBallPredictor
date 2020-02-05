@@ -14,7 +14,7 @@ namespace FootballPredictorML.ConsoleApp
     public static class ModelBuilder
     {
         private static string TRAIN_DATA_FILEPATH = @"C:\Users\dillan.cagnetta.EURO_NT\Desktop\FootBall_Results_2018_2019.csv";
-        private static string MODEL_FILEPATH = @"../../../../FootballPredictorML.Model/MLModel.zip";
+        private static string MODEL_FILEPATH = @"C:\Samples\FootballPredictor\backend\FootballPredictorML.Model\MLModel.zip";
 
         // Create MLContext to be shared across the model creation workflow objects 
         // Set a random seed for repeatable/deterministic results across multiple trainings.
