@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using FootballPredictor.Api.Application.MatchDay.Commands;
+using FootballPredictor.Api.Application.MatchDay.Queries;
 using FootballPredictor.Domain.Services;
+using FootballPredictorML.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
-using FootballPredictor.Api.Application.MatchDay.Queries;
-using FootballPredictor.Dto;
-using FootballPredictorML.Model;
 
 namespace FootballPredictor.Api.Application.MatchDay.Controllers
 {
@@ -18,16 +17,19 @@ namespace FootballPredictor.Api.Application.MatchDay.Controllers
 
         private readonly ICommandHandler<GetAndStoreMatchData> _matchData;
         private readonly IQueryHandler<QueryGetMatchDayFixtures, MatchFixtures> _fixturesQuery;
+        private readonly IQueryHandler<QueryAllMatchesPrediction, IEnumerable<MatchDayPrediction>> _predictor;
 
         public MatchController(
             ICommandHandler<GetAndStoreMatchData> matchData,
-            IQueryHandler<QueryGetMatchDayFixtures, MatchFixtures> fixturesQuery)
+            IQueryHandler<QueryGetMatchDayFixtures, MatchFixtures> fixturesQuery,
+            IQueryHandler<QueryAllMatchesPrediction, IEnumerable<MatchDayPrediction>> predictor)
         {
             _matchData = matchData;
             _fixturesQuery = fixturesQuery;
+            _predictor = predictor;
         }
 
-        [HttpGet]
+        [HttpGet("fixtures")]
         public async Task<IActionResult> GetMatchDayFixtures([FromBody] QueryGetMatchDayFixtures query, CancellationToken token)
         {
             return Ok(await _fixturesQuery.Handle(query, token));
@@ -42,7 +44,7 @@ namespace FootballPredictor.Api.Application.MatchDay.Controllers
         }
 
         [HttpGet("predict")]
-        public async Task<IActionResult> Predict([FromBody] PredictMatchOutcome command, CancellationToken token)
+        public async Task<IActionResult> Predict([FromBody] PredictMatch command, CancellationToken token)
         {
             var prediction = ConsumeModel.Predict(new ModelInput
             {
@@ -51,6 +53,12 @@ namespace FootballPredictor.Api.Application.MatchDay.Controllers
             });
 
             return Ok(prediction);
+        }
+
+        [HttpGet("predict-all")]
+        public async Task<IActionResult> PredictAllMatches([FromBody] QueryAllMatchesPrediction command, CancellationToken token)
+        {
+            return Ok(await _predictor.Handle(command, token));
         }
     }
 }

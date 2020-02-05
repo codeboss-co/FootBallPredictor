@@ -46,6 +46,19 @@ Content-Type: application/json
 }
 ```
 
+```
+GET /match/fixtures HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+
+{
+	"Competition" : "PL",
+	"Matchday" : 26,
+	"Season" : 2019
+}
+```
+
+
 ## Database ML Query
 
 ```
