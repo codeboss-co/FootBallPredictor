@@ -37,8 +37,8 @@ namespace FootballPredictor.Domain.Model
             HomeTeamId = dto.HomeTeam.Id;
             AwayTeam = dto.AwayTeam.Name;
             AwayTeamId = dto.AwayTeam.Id;
-            HomeTeamGoals = dto.Score.FullTime.HomeTeam;
-            AwayTeamGoals = dto.Score.FullTime.AwayTeam;
+            HomeTeamGoals = dto.Score.FullTime.HomeTeam.Value;
+            AwayTeamGoals = dto.Score.FullTime.AwayTeam.Value;
             SetWinnerId(dto);
         }
 

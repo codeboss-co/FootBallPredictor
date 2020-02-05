@@ -44,8 +44,8 @@ namespace FootballPredictor.Dto
 
     public class FullTime
     {
-        public int HomeTeam { get; set; }
-        public int AwayTeam { get; set; }
+        public int? HomeTeam { get; set; }
+        public int? AwayTeam { get; set; }
     }
     
     public class Score

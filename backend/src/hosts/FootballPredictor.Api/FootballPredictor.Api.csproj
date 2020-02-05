@@ -26,9 +26,5 @@
     <ProjectReference Include="..\..\libraries\FootballPredictor.FootballDataProvider.Http\FootballPredictor.FootballDataProvider.Http.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\MatchDay\Queries\" />
-  </ItemGroup>
-
 
 </Project>

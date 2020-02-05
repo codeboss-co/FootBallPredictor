@@ -11,7 +11,17 @@
 
 > dotnet ef database update -s .\src\hosts\FootballPredictor.Api\ -p .\src\libraries\Data\FootballPredictor.Data.EFCore.PostgreSQL\
 
-## Postman
+## Api Requests
+
+### FootBall-Data
+
+```
+GET /v2/competitions/PL/matches?matchday=26&season=2019 HTTP/1.1
+Host: api.football-data.org
+X-Auth-Token: >>> TOKEN GOES HERE <<<
+```
+
+### Postman
 
 ```
 POST /match HTTP/1.1
@@ -22,6 +32,17 @@ Content-Type: application/json
 	"Competition" : "PL",
 	"Matchday" : 1,
 	"Season" : 2018
+}
+```
+
+```
+GET /match/predict HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+
+{
+	"HomeTeam" : "Tottenham Hotspur FC",
+	"AwayTeam" : "Manchester City FC"
 }
 ```
 
@@ -47,3 +68,7 @@ FROM "public"."Matches"
 ## Logging
 
 > docker run -e ACCEPT_EULA=Y   -v /path/to/seq/data:/data   -p 80:80   -p 5341:5341   datalust/seq:latest
+
+
+## ML.Net
+https://towardsdatascience.com/introduction-to-machine-learning-in-c-with-ml-net-bf45502d8110
