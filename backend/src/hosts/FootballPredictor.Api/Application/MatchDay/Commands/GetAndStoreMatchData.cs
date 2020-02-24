@@ -5,6 +5,7 @@ using FootballPredictor.Domain.Services;
 using System.Threading;
 using System.Threading.Tasks;
 using FootballPredictor.Common;
+using Serilog;
 
 namespace FootballPredictor.Api.Application.MatchDay.Commands
 {
@@ -38,14 +39,17 @@ namespace FootballPredictor.Api.Application.MatchDay.Commands
                                                 .ConfigureAwait(false);
 
             var matchList = new List<Match>(matchData.Matches.Count);
-            foreach (var matchDto in matchData.Matches)
-            {
-                matchList.Add(new Match(matchDto));
-            }
-
+            matchData.Matches.ForEach(matchDto => matchList.Add(new Match(matchDto)));
+            
             if (!matchList.IsNullOrEmpty())
             {
+                Log.Information("Inserting match data into database.");
                 await _matchDbRepository.InsertManyAsync(matchList, token).ConfigureAwait(false);
+                Log.Information("Match data successfully inserted: {matches}", matchList.Count);
+            }
+            else
+            {
+                Log.Information("No match data to insert into database.");
             }
         }
     }
